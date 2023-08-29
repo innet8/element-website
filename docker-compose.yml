@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: "web-nginx-${APP_ID}"
+    image: "nginx:alpine"
+    ports:
+      - "${APP_PORT}:80"
+    volumes:
+      - ./docker/nginx:/etc/nginx/conf.d
+      - ${WEB_PATH}:/var/www/public
+    environment:
+      TZ: "Asia/Shanghai"
+    networks:
+      extnetwork:
+        ipv4_address: "${APP_IPPR}.3"
+    restart: unless-stopped
+
+networks:
+  extnetwork:
+    name: "web-networks-${APP_ID}"
+    ipam:
+      config:
+        - subnet: "${APP_IPPR}.0/24"
+          gateway: "${APP_IPPR}.1"

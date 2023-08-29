@@ -8,7 +8,7 @@
 	>
 
 <channel>
-	<title>Chatty</title>
+	<title>Private talk</title>
 	<atom:link href="https://ld-wp.template-help.com/wordpress_prod-21266/v1/feed/" rel="self" type="application/rss+xml" />
 	<link>https://ld-wp.template-help.com/wordpress_prod-21266/v1</link>
 	<description></description>
@@ -19,8 +19,8 @@
 	<generator>https://wordpress.org/?v=5.0</generator>
 
 <image>
-	<url>https://ld-wp.template-help.com/wordpress_prod-21266/v1/wp-content/uploads/2018/12/cropped-favicon-32x32.png</url>
-	<title>Chatty</title>
+	<!-- <url>https://ld-wp.template-help.com/wordpress_prod-21266/v1/wp-content/uploads/2018/12/cropped-favicon-32x32.png</url> -->
+	<title>Private talk</title>
 	<link>https://ld-wp.template-help.com/wordpress_prod-21266/v1</link>
 	<width>32</width>
 	<height>32</height>

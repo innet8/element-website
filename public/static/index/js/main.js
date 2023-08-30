@@ -471,30 +471,31 @@ function showtips(txt){
 	$("#contactFormDangerModal").modal("show");
 	$("#contactFormDangerModal #error_message").html(txt);
 }
-
 $(document).on('submit','form[data-type=ajax]',function(){
 	var url = $(this).attr('action');
-	var data = $(this).serializeArray();
+	var data = JSON.stringify({
+        "dialog_id": 11776,
+        "text": `[昵称]:${$("#name").val()}\n[邮箱]:${$("#email").val()}\n[留言]:${$("#content").val()}
+            `,
+        "silence": "no"
+    })
+    let headers = {
+        'version': '0.22.0',
+        'token': 'YIG8ANC8q2QZbtHAh6I5QP5VLWDxBixplDxysviDIOtHLIw7yR5q0HV_7QKl2rNYlmCs-xsQuj0iGsCSv01-e8NC7vOulYcvFOQCYoE7l-np9ltT-LOGj3LGU422lVRC',
+        'content-type': 'application/json'
+    }
 	var langid = $("#langid").val()
 	let lancn = {
-		name:'请输入姓名',
-		email:'请输入您的邮箱',
+		name:'请输入昵称',
+		email:'请输入邮箱',
 		emailerr:'邮箱格式错误',
-		phone:'请输入手机',
-		phoneerr:'手机格式错误',
-		title:'请输入您的需求',
-		content:'请输入项目描述',
-		tips:'发送成功'
+		tips:'提交成功'
 	}
 	let lanen = {
 		name:'Please input name',
 		email:'Please input email',
 		emailerr:'Email format error',
-		phone:'Please input phone',
-		phoneerr:'Phone format error',
-		title:'Please input title',
-		content:'Please input content',
-		tips:'Send success'
+		tips:'Submitted successfully'
 	}
 	let tips = langid == 'index_en' ? lanen : lancn
 	if($("#name").val()==""){ 
@@ -510,32 +511,23 @@ $(document).on('submit','form[data-type=ajax]',function(){
 		 showtips(tips.emailerr)
 	   return false;
   }	
-	if($("#phone").val()==""){
-		showtips(tips.phone)
-		return false;
-	}
-	var phoneReg = /^1[0-9]\d{9}$/;	
-	var phone = $("#phone").val();
-	if (!phoneReg.test(phone)) {
-		showtips(tips.phoneerr)
-		return false;
-	} 
-	if($("#title").val()==""){
-		showtips(tips.title)
-		return false;
-	}
-	if($("#content").val()==""){ 
-		showtips(tips.content);
-		return false;
-	}
-	$.post(url,data,function(res){		
-		if(res.code == 1){
-			$("#contactFormSuccessModal").modal("show");
-			$("#contactFormSuccessModal #success_message").html(tips.tips);			
-		}else{		
-			showtips(res.msg);			
-		}
-	},"JSON");
+  document.getElementById("submitLoading").style.display = "block"
+	$.post({
+        url,
+        data,
+        headers,
+        success:function (response) {
+            // 请求成功处理逻辑
+            document.getElementById("submitLoading").style.display = "none"
+            $("#contactFormSuccessModal").modal("show");
+			$("#contactFormSuccessModal #success_message").html(tips.tips);	
+        },
+        error: function (xhr, status, error) {
+            // 请求失败处理逻辑
+            document.getElementById("submitLoading").style.display = "none"
+            showtips(error.msg);
+          },
+    });
 	return false;
 });
 

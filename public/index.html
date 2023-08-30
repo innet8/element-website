@@ -1,1071 +1,1138 @@
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Private Talk</title>
-        <meta name="keywords" content="Private Talk">
-        <meta name="description" content="Private Talk是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！">
-		<!--// Boostrap v4 //-->
-		<link rel="stylesheet" href="static/index/vendor/css/bootstrap.min.css">
-		<!--// Magnific Popup //-->
-		<link rel="stylesheet" href="static/index/vendor/css/magnific.popup.min.css">
-		<!--// Animate Css //-->
-		<link rel="stylesheet" href="static/index/vendor/css/animate.min.css">
-		<!--// Owl Carousel //-->
-		<link rel="stylesheet" href="static/index/vendor/css/owl.carousel.min.css">
-		<!--// Owl Carousel Default //-->
-		<link rel="stylesheet" href="static/index/vendor/css/owl.carousel.default.min.css">
-		<!--// Font Awesome //-->
-		<link rel="stylesheet" href="static/index/fonts/font_awesome/css/all.css">
-		<!--// Theme Main Css //-->
-		<link rel="stylesheet" href="static/index/css/style%EF%B9%96v=1693358684.css">
-		<link rel="shortcut icon" href="./images/favicon.ico">
 
-	</head>
-	<body data-spy="scroll" data-target="#fixedNavbar">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Private Talk</title>
+	<meta name="keywords" content="Private Talk">
+	<meta name="description"
+		content="Private Talk是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！">
+	<!--// Boostrap v4 //-->
+	<link rel="stylesheet" href="static/index/vendor/css/bootstrap.min.css">
+	<!--// Magnific Popup //-->
+	<link rel="stylesheet" href="static/index/vendor/css/magnific.popup.min.css">
+	<!--// Animate Css //-->
+	<link rel="stylesheet" href="static/index/vendor/css/animate.min.css">
+	<!--// Owl Carousel //-->
+	<link rel="stylesheet" href="static/index/vendor/css/owl.carousel.min.css">
+	<!--// Owl Carousel Default //-->
+	<link rel="stylesheet" href="static/index/vendor/css/owl.carousel.default.min.css">
+	<!--// Font Awesome //-->
+	<link rel="stylesheet" href="static/index/fonts/font_awesome/css/all.css">
+	<!--// Theme Main Css //-->
+	<link rel="stylesheet" href="static/index/css/style%EF%B9%96v=1693358684.css">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<!-- 联系我们 留言 -->
+	<link rel="stylesheet" href="css/contact.css">
 
-		<!--// Page Wrapper Start //-->
-		<div class="page-wrapper" id="wrapper">
+</head>
 
-			<!--// Header Start //-->
-			<header class="header fixed-top" id="header">
-				<div id="nav-menu-wrap">
-					<div class="container">
-						<nav class="navbar navbar-expand-lg p-0">
-							<a class="navbar-brand" title="Home" href="index.html">
-								<img src="./images/p_logo-white.svg" alt="Logo White" width="140" height="64" class="img-fluid logo-transparent">
-								<img src="./images/p_logo.svg" alt="Logo White" width="140" height="64" class="img-fluid logo-normal">
-							</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse"
-								data-target="#fixedNavbar" aria-controls="fixedNavbar" aria-expanded="false"
-								aria-label="Toggle navigation">
-								<span class="togler-icon-inner">
-									<span class="line-1"></span>
-									<span class="line-2"></span>
-									<span class="line-3"></span>
-								</span>
-							</button>
-							<div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
-								<ul class="navbar-nav">
-								        
-									<li class="nav-item">
-										<a class="nav-link active menu-link" href="#home">首页</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link menu-link" href="#features">功能</a>
-									</li>
+<body data-spy="scroll" data-target="#fixedNavbar">
 
-									<li class="nav-item">
-										<a class="nav-link menu-link" href="#testimonials">客户</a>
+	<!--// Page Wrapper Start //-->
+	<div class="page-wrapper" id="wrapper">
+
+		<!--// Header Start //-->
+		<header class="header fixed-top" id="header">
+			<div id="nav-menu-wrap">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg p-0">
+						<a class="navbar-brand" title="Home" href="index.html">
+							<img src="./images/p_logo-white.svg" alt="Logo White" width="140" height="64"
+								class="img-fluid logo-transparent">
+							<img src="./images/p_logo.svg" alt="Logo White" width="140" height="64" class="img-fluid logo-normal">
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fixedNavbar"
+							aria-controls="fixedNavbar" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="togler-icon-inner">
+								<span class="line-1"></span>
+								<span class="line-2"></span>
+								<span class="line-3"></span>
+							</span>
+						</button>
+						<div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
+							<ul class="navbar-nav">
+
+								<li class="nav-item">
+									<a class="nav-link active menu-link" href="#home">首页</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link menu-link" href="#features">功能</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link menu-link" href="#testimonials">客户</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link menu-link" href="#pricing">价格</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link menu-link" href="news/index.html">新闻</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link menu-link" href="#contact">联系</a>
+								</li>
+
+								<li class=" lang-nav d-flex align-items-center">
+									<a href="javascript:zh_tran('t');">繁</a>
+									<a href="javascript:zh_tran('s');">中</a>
+									<a href="index/index/index.html">英</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!--// Header End  //-->
+
+		<!--// Main Area Start //-->
+		<main class="main-area">
+
+			<!--// Hero Section Start //-->
+
+			<section class="hero-banner" id="home"
+				data-bg-image-path="https://www.aatcw.com/static/index/img/bg/hero-pattern.svg">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-7 col-xl-6 col-md-10" style="position:relative; z-index:1;">
+							<div class="hero-inner">
+								<h1>Private Talk稳定成熟的即时通讯软件，不稳定支持全额退款！</h1>
+								<h2>
+									Private
+									Talk是自研通讯层，protobuf通讯协议，稳定运行720天不掉线稳定才强悍，弱网优化更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！
+								</h2>
+								<div class="btn-group">
+									<a href="#" target="_blank" title="安卓下载" class="outline-btn" style="padding:12px 20px;">安卓下载</a>
+									<a href="#" target="_blank" title="平果下载" class="outline-btn" style="padding:12px 20px;">苹果下载</a>
+									<a href="#" target="_blank" title="PC下载" class="outline-btn" style="padding:12px 20px;">PC下载</a>
+									<a href="#" target="_blank" title="mac下载" class="outline-btn" style="padding:12px 20px;">mac下载</a>
+									<a href="#" target="_blank" title="web版本" class="outline-btn" style="padding:12px 20px;">web版本</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-xl-6 col-md-12 hero-img-resp">
+							<div class="hero-img">
+								<img src="images/e3e692aefea3b770517fa85991ca28e5.png" alt="Private Talk" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Hero Section End //-->
+
+			<!--// Features Section Start //-->
+			<section class="section" id="features">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>很棒的 <span>功能</span></h2>
+								<h4>信息安全可靠，端到端加密</h4>
+							</div>
+						</div>
+					</div>
+					<div class="features-carousel owl-carousel owl-theme">
+						<div class="item">
+							<div class="features-item">
+								<div class="icon">
+									<span class="fa fa-tablet-alt"></span>
+								</div>
+								<div class="body">
+									<h6>私有化部署</h6>
+									<p>
+										灵活部署于用户自己的私有服务器，包括办公小型服务器，云服务器，数据中心机房 </p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="features-item">
+								<div class="icon">
+									<span class="fas fa-rocket"></span>
+								</div>
+								<div class="body">
+									<h6>端到端加密</h6>
+									<p>
+										采用商用密码SM2，SM3，SM4，3DES加密算法，保证信息在传输过程中无法被窃取 </p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="features-item">
+								<div class="icon">
+									<span class="fas fa-cloud-upload-alt"></span>
+								</div>
+								<div class="body">
+									<h6>强大的群管理</h6>
+									<p>
+										群主可禁止群成员互加好友，禁止修改昵称，群禁言，单独禁言，远程定时销毁群消息等 </p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="features-item">
+								<div class="icon">
+									<span class="fas fa-fill"></span>
+								</div>
+								<div class="body">
+									<h6>对话高保护</h6>
+									<p>
+										双向删除对话，阅后即焚、定期销毁、绝密会话、私密会话等功能 </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Features Section End //-->
+
+			<!--// About Section Start //-->
+			<section class="section bg-light-grey" id="about">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<div class="about-inner">
+								<h6>关于应用Private Talk</h6>
+								<h2>应用支持集群部署，高负载无压力，百万人同时在线，大群支撑万人群组，弱网的消息效率极佳！</h2>
+								<p>
+									Private Talk支持对接各大安卓厂商的离线推送，消息一触即发，音视频通话支持选择第三方节点介入，通话更高效顺畅！ </p>
+								<div class="about-box-wrap">
+									<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<div class="about-box">
+												<h6>好评用户</h6>
+												<h5 class="counter">1080</h5>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<div class="about-box">
+												<h6>下载应用程序</h6>
+												<h5 class="counter">16800</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#new-features" title="Read More" class="primary-btn">阅读更多</a>
+							</div>
+						</div>
+						<div class="col-lg-6 about-img">
+							<img src="images/912d4704ddb2fbdab8f64a22ff12fbb4.png" alt="About image" title="About image"
+								class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// About Section End //-->
+
+			<!--// New Features Section Start //-->
+			<section id="new-features">
+				<div class="new-features-img">
+					<img src="images/84009a4c847dc325fe7e4592771c2614.png" alt="Private Talk新的功能" title="Private Talk新的功能">
+				</div>
+				<div class="container">
+					<div class="row justify-content-end">
+						<div class="col-lg-6">
+							<div class="new-features-inner">
+								<div class="inner-text">
+									<h6>Private Talk新的功能</h6>
+									<h2>持续迭代更新产品应用，优化产品体验，加固通讯底层并发！</h2>
+									<p>
+										持续迭代更新产品应用，优化产品体验，加固通讯底层并发！ </p>
+								</div>
+								<ul class="new-features-list">
+									<li>
+										<h5>01</h5>
+										<div class="text">
+											<h6>朋友生活圈瞬间</h6>
+											<p>
+												除了拥有私密安全的通讯功能外还拥有朋友圈，生活圈，分享精彩的生活瞬间！ </p>
+										</div>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link menu-link" href="#pricing">价格</a>
+									<li>
+										<h5>02</h5>
+										<div class="text">
+											<h6>激活码注册</h6>
+											<p>
+												为了更好的筛选用户，提高用户质量，Private Talk打造出完美的激活码注册模式！ </p>
+										</div>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link menu-link" href="news/index.html">新闻</a>
+								</ul>
+								<a href="#screenshots" title="Read More" class="primary-btn">阅读更多</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// New Features Section End //-->
+
+			<!--// Screenshots Section Start //-->
+			<section class="section" id="screenshots">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>应用 <span>截图</span></h2>
+								<h4>
+									Private Talk界面展示 </h4>
+							</div>
+						</div>
+					</div>
+					<div class="screenshots-carousel owl-carousel owl-theme">
+						<div class="item">
+							<img src="images/2e1d3152a4638d5071ac23fc2d1e6dfb.png" alt="应用截图1" class="img-fluid">
+						</div>
+						<div class="item">
+							<img src="images/ebee148347e8b302a2e6fddbfd3d5103.png" alt="应用截图1" class="img-fluid">
+						</div>
+						<div class="item">
+							<img src="images/e28d3244fb2d5dda3fae68f1f4577858.png" alt="应用截图1" class="img-fluid">
+						</div>
+						<div class="item">
+							<img src="images/f91c9adb366ecb03647f2b788ba1f7d7.png" alt="应用截图1" class="img-fluid">
+						</div>
+						<div class="item">
+							<img src="images/ecfd661ba951e87c1d3c5da5997f305f.png" alt="应用截图1" class="img-fluid">
+						</div>
+						<div class="item">
+							<img src="images/5fc248f031d7768c00cbc5b6b0239239.png" alt="应用截图1" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Screenshots Section End //-->
+
+			<!--// Watch Video Section Start //-->
+			<div id="watch-video" data-bg-image-path="https://www.aatcw.com/static/index/img/bg/watch-video-bg.png">
+				<div class="container text-center">
+					<div class="watch-video-inner">
+						<a href="static/index/home.mp4" class="watch-video-btn"><i class="fa fa-play"></i></a>
+					</div>
+				</div>
+			</div>
+			<!--// Watch Video Section End //-->
+
+			<!--// Testimonials Section Start //-->
+			<section class="section bg-light-grey" id="testimonials">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>我们的 <span>客户 </span> 怎么说</h2>
+								<h4>
+									一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力 </h4>
+							</div>
+						</div>
+					</div>
+					<div class="testimonials-carousel owl-carousel owl-theme">
+						<div class="item">
+							<div class="testimonial-item">
+								<div class="img">
+									<img src="images/0d0620dfc8f7dcbb907fce74d5be9933.png" alt="乔治·威廉" title="乔治·威廉">
+								</div>
+								<div class="body">
+									<h6>乔治·威廉</h6>
+									<span>香港客户</span>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<p>
+										im 大群客户，需要支持万人群，之前一直用别的三方，架构不稳定，经常tcp连接不上，后面找到我们目前系统用户超10w+，同时最高在线1w+，互动顺畅，使用的是4核32g的服务器x3台 </p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-item">
+								<div class="img">
+									<img src="images/2f76af7d5e29a345478168a18ecd786a.png" alt="理查德·阿尔维斯" title="理查德·阿尔维斯">
+								</div>
+								<div class="body">
+									<h6>理查德·阿尔维斯</h6>
+									<span>新加坡私有化海外客户</span>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<p>
+										之前用的是开源的三方即时通讯的软件，群管理功能不够用，自己去二开的话技术成本极高，而且需要测试，完全不能商用，最终选择了Private Talk私有化部署，3天就上线了，现在用户有5w，一切稳定！
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-item">
+								<div class="img">
+									<img src="images/35b951ef05d46a10bda910e1cb4651ca.png" alt="詹姆斯·凯里" title="詹姆斯·凯里">
+								</div>
+								<div class="body">
+									<h6>詹姆斯·凯里</h6>
+									<span>越南 客户</span>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<p>
+										当时在越南本地找的开发团队在开发，开发测试上线，由于越南技术团队不成熟，im经验不够，bug问题比较多，几百个用户就开始卡，直接没法使用，导致项目耽搁，最好找到mi团队定制私有化部署，快速上线，稳定运行中！
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-item">
+								<div class="img">
+									<img src="images/a1c3a4456cbc0753cbee743ffdfb6faa.png" alt="阿尔 · 维斯" title="阿尔 · 维斯">
+								</div>
+								<div class="body">
+									<h6>阿尔 · 维斯</h6>
+									<span>马来西亚客户</span>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<p>
+										当时在网上找的软件团队买了一个便宜有后门的通讯软件，用着用着非常多的问题，各种漏洞，导致项目损失惨重，后面经过朋友介绍找到Private
+										Talk团队，现在聊天软件非常稳定，基本不存在售后，非常的省心！ </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Testimonials Section End //-->
+
+			<!--// Pricing Section Start //-->
+			<section class="section pb-minus-70" id="pricing">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>我们的 <span>定价 </span></h2>
+								<h4>企业级私有化部署，支持集群单机等部署方式，自定义logo，自定义app名字！</h4>
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-6 col-lg-4">
+							<div class="price-table">
+								<div class="icon">
+									<span class="fa fa-user-shield"></span>
+								</div>
+								<div class="text">
+									<h2>￥30000</h2>
+									<h6>租用版本单节点</h6>
+									<span>租用</span>
+								</div>
+								<div class="list">
+									<p>&nbsp;每月租金：8000元/月<br />&nbsp;服务器：自费（代买）<br /></p>
+									<p>&nbsp;单聊</p>
+									<p style="white-space: normal;">&nbsp;群聊</p>
+									<p style="white-space: normal;">&nbsp;节点支持数：单个节点<br /><span
+											style="text-wrap: wrap;">&nbsp;音视频通话：否</span></p>
+									<p style="white-space: normal;">&nbsp;web多开：否<br /></p>
+									<p style="white-space: normal;">&nbsp;5/8h技术 支持</p>
+									<p style="white-space: normal;">&nbsp;免费更新</p>
+									<p style="white-space: normal;">&nbsp;大群支持1000人以内</p>
+									<p style="white-space: normal;">&nbsp;bug免费修复</p>
+									<p>&nbsp;客户端支持：安卓+ios+web</p>
+								</div>
+								<a href="#" title="Order Now" class="primary-btn">现在下单</a>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="price-table">
+								<div class="icon">
+									<span class="fa fa-user-shield"></span>
+								</div>
+								<div class="text">
+									<h2>￥59800</h2>
+									<h6>单节点版本</h6>
+									<span>永久</span>
+								</div>
+								<div class="list">
+									<p>&nbsp;单聊</p>
+									<p>&nbsp;群聊</p>
+									<p><span style="text-wrap: wrap;">&nbsp;音视频通话：否</span><br />&nbsp;<span
+											style="color: rgb(255, 0, 0);">web是否支持多开：否</span><br /></p>
+									<p>&nbsp;<span style="color: rgb(255, 0, 0);">节点支持数：单个节点</span></p>
+									<p><span style="color: rgb(255, 0, 0);">&nbsp;服务器：私有</span></p>
+									<p>&nbsp;6/10h技术 支持</p>
+									<p>&nbsp;免费更新</p>
+									<p>&nbsp;大群支持2000人以内</p>
+									<p>&nbsp; bug免费修复</p>
+									<p>&nbsp;多服务器分布部署</p>
+									<p>&nbsp;客户端：安卓+苹果+web<br />&nbsp;运维私有化：支持<span style="text-wrap: wrap;">（会提供运维文档）</span></p>
+								</div>
+								<a href="#" title="Order Now" class="primary-btn">现在下单</a>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="price-table">
+								<div class="icon">
+									<span class="fa fa-user-tie"></span>
+								</div>
+								<div class="text">
+									<h2>￥78000</h2>
+									<h6>多节点版本【推荐】</h6>
+									<span>永久</span>
+								</div>
+								<div class="list">
+									<p style="white-space: normal;"></p>
+									<p style="text-wrap: wrap;">&nbsp;单聊</p>
+									<p style="text-wrap: wrap;">&nbsp;群聊</p>
+									<p style="text-wrap: wrap;"><span
+											style="color: rgb(255, 0, 0);">&nbsp;音视频通话：支持</span><br />&nbsp;<span
+											style="color: rgb(255, 0, 0);">web是否支持多开：否</span><br /></p>
+									<p style="text-wrap: wrap;">&nbsp;<span style="color: rgb(255, 0, 0);">节点支持数：单个节点</span></p>
+									<p style="text-wrap: wrap;"><span style="color: rgb(255, 0, 0);">&nbsp;服务器：私有<br /><span
+												style="color: rgb(255, 0, 0); text-wrap: wrap;">&nbsp;群管理：支持定制化</span></span></p>
+									<p style="text-wrap: wrap;">&nbsp;7/12h技术 支持</p>
+									<p style="text-wrap: wrap;">&nbsp;免费更新</p>
+									<p style="text-wrap: wrap;">&nbsp;大群支持8000人以内</p>
+									<p style="text-wrap: wrap;">&nbsp; bug免费修复</p>
+									<p style="text-wrap: wrap;">&nbsp;多服务器弹性部署</p>
+									<p style="text-wrap: wrap;">&nbsp;客户端：安卓+苹果+web<br />&nbsp;运维私有化：支持（会提供运维文档）</p>
+									<p style="white-space: normal;">&nbsp;</p>
+								</div>
+								<a href="#" title="Order Now" class="primary-btn">现在下单</a>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="price-table">
+								<div class="icon">
+									<span class="fa fa-building"></span>
+								</div>
+								<div class="text">
+									<h2>￥108000</h2>
+									<h6>旗舰型</h6>
+									<span>永久</span>
+								</div>
+								<div class="list">
+									<p style="white-space: normal;">&nbsp;单聊</p>
+									<p style="white-space: normal;">&nbsp;群聊</p>
+									<p style="white-space: normal;">&nbsp;音视频</p>
+									<p style="white-space: normal;">&nbsp;支持多节点（不限制数量）</p>
+									<p style="white-space: normal;">&nbsp;分布式架构（企业级微服务）</p>
+									<p style="white-space: normal;">&nbsp;7/24 支持</p>
+									<p style="white-space: normal;">&nbsp;免费更新</p>
+									<p style="white-space: normal;">&nbsp;大群支持不上限</p>
+									<p style="white-space: normal;">&nbsp;bug免费修复</p>
+									<p style="white-space: normal;">&nbsp;集群部署+分布式架构</p>
+									<p style="white-space: normal;">&nbsp;客户端（安卓+苹果+Windows+web）原生</p>
+									<p style="white-space: normal;">&nbsp;需要更多客户端请联系客服报价</p>
+								</div>
+								<a href="#" title="Order Now" class="primary-btn">现在下单</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Pricing Section End //-->
+
+			<!--// Download Section Start //-->
+			<section id="download-app" data-bg-image-path="https://www.aatcw.com/static/index/img/bg/download-app-bg.png">
+				<div class="container text-center">
+					<div class="row justify-content-center">
+						<div class="col-lg-12">
+							<div class="download-app-inner">
+								<div class="text">
+									<h2>下载应用程序</h2>
+									<p>一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力</p>
+								</div>
+								<div class="btn-group">
+									<a href="#" title="安卓下载" class="outline-btn" target="_blank">安卓下载</a>
+									<a href="#" title="平果下载" class="outline-btn" target="_blank">苹果下载</a>
+									<a href="#" title="PC下载" class="outline-btn" target="_blank">PC下载</a>
+									<a href="#" title="mac下载" class="outline-btn" target="_blank">mac下载</a>
+									<a href="#" title="web版本" class="outline-btn" target="_blank">web版本</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Download Section End //-->
+
+			<!--// Our Team Section Start //-->
+			<section class="section bg-light-grey" id="our-team">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>认识我们的 <span>团队 </span></h2>
+								<h4>
+									一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力 </h4>
+							</div>
+						</div>
+					</div>
+					<div class="our-team-carousel owl-carousel owl-theme">
+						<div class="item">
+							<div class="team-item">
+								<div class="img">
+									<img src="images/85f4dc14177b4d78947113bbf66866a8.png"
+										alt="/images/85f4dc14177b4d78947113bbf66866a8.png" title="迈克尔·威廉">
+								</div>
+								<div class="body">
+									<h6>
+										迈克尔·威廉 </h6>
+									<span>go lang 通讯层sever工程师</span>
+								</div>
+								<ul class="social">
+									<li>
+										<a href="#" target="_blank" title="Facebook Link">
+											<i class="fab fa-facebook-f"></i>
+										</a>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link menu-link" href="#contact">联系</a>
+									<li>
+										<a href="#" target="_blank" title="Twitter Link">
+											<i class="fab fa-twitter"></i>
+										</a>
 									</li>
-																		
-									<li class=" lang-nav d-flex align-items-center">
-										<a href="javascript:zh_tran('t');">繁</a>
-										<a href="javascript:zh_tran('s');">中</a>
-										<a href="index/index/index.html">英</a>
+									<li>
+										<a href="#" target="_blank" title="Instagram Link">
+											<i class="fab fa-instagram"></i>
+										</a>
 									</li>
 								</ul>
 							</div>
-						</nav>
-					</div>
-				</div>
-			</header>			
-			<!--// Header End  //-->
-
-			<!--// Main Area Start //-->
-			<main class="main-area">
-
-				<!--// Hero Section Start //-->
-				
-				<section class="hero-banner" id="home" data-bg-image-path="https://www.aatcw.com/static/index/img/bg/hero-pattern.svg">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-7 col-xl-6 col-md-10" style="position:relative; z-index:1;">
-								<div class="hero-inner">
-																		<h1>Private Talk稳定成熟的即时通讯软件，不稳定支持全额退款！</h1>
-									<h2>
-										Private Talk是自研通讯层，protobuf通讯协议，稳定运行720天不掉线稳定才强悍，弱网优化更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！									</h2>									
-																		<div class="btn-group">
-																				<a href="#" target="_blank" title="安卓下载" class="outline-btn" style="padding:12px 20px;">安卓下载</a>
-																				<a href="#" target="_blank" title="平果下载" class="outline-btn" style="padding:12px 20px;">苹果下载</a>
-																				<a href="#" target="_blank" title="PC下载" class="outline-btn" style="padding:12px 20px;">PC下载</a>
-																				<a href="#" target="_blank" title="mac下载" class="outline-btn" style="padding:12px 20px;">mac下载</a>
-																				<a href="#" target="_blank" title="web版本" class="outline-btn" style="padding:12px 20px;">web版本</a>
-																			</div>
+						</div>
+						<div class="item">
+							<div class="team-item">
+								<div class="img">
+									<img src="images/2abdfdf4fbb0af184e6b2d3c43186bde.png"
+										alt="/images/2abdfdf4fbb0af184e6b2d3c43186bde.png" title="里克·罗德里格斯">
 								</div>
-							</div>
-							<div class="col-lg-5 col-xl-6 col-md-12 hero-img-resp">
-								<div class="hero-img">
-									<img src="images/e3e692aefea3b770517fa85991ca28e5.png" alt="Private Talk" class="img-fluid">								</div>
+								<div class="body">
+									<h6>
+										里克·罗德里格斯 </h6>
+									<span>java后端架构师</span>
+								</div>
+								<ul class="social">
+									<li>
+										<a href="#" target="_blank" title="Facebook Link">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank" title="Twitter Link">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank" title="Instagram Link">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
-					</div>
-				</section>
-				<!--// Hero Section End //-->
-
-				<!--// Features Section Start //-->
-				<section class="section" id="features">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>很棒的 <span>功能</span></h2>
-									<h4>信息安全可靠，端到端加密</h4>
-																	</div>
+						<div class="item">
+							<div class="team-item">
+								<div class="img">
+									<img src="images/cc79578aebe4a677cf0d59ae8b0e0de5.png"
+										alt="/images/cc79578aebe4a677cf0d59ae8b0e0de5.png" title="内森考利">
+								</div>
+								<div class="body">
+									<h6>
+										内森考利 </h6>
+									<span>ios客户端工程师</span>
+								</div>
+								<ul class="social">
+									<li>
+										<a href="#" target="_blank" title="Facebook Link">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank" title="Twitter Link">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank" title="Instagram Link">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="features-carousel owl-carousel owl-theme">
-														<div class="item">
-								<div class="features-item">
-									<div class="icon">
-										<span class="fa fa-tablet-alt"></span>
-									</div>
-									<div class="body">
-										<h6>私有化部署</h6>
-										<p>
-											灵活部署于用户自己的私有服务器，包括办公小型服务器，云服务器，数据中心机房										</p>
-									</div>
+						<div class="item">
+							<div class="team-item">
+								<div class="img">
+									<img src="images/bbd23e4f76d9218b937f4fd7a9d583b2.png"
+										alt="/images/bbd23e4f76d9218b937f4fd7a9d583b2.png" title="古斯塔沃·弗林">
 								</div>
-							</div>
-														<div class="item">
-								<div class="features-item">
-									<div class="icon">
-										<span class="fas fa-rocket"></span>
-									</div>
-									<div class="body">
-										<h6>端到端加密</h6>
-										<p>
-											采用商用密码SM2，SM3，SM4，3DES加密算法，保证信息在传输过程中无法被窃取										</p>
-									</div>
+								<div class="body">
+									<h6>
+										古斯塔沃·弗林 </h6>
+									<span>Android客户端开发工程师</span>
 								</div>
+								<ul class="social">
+									<li>
+										<a href="" target="_blank" title="Facebook Link">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="" target="_blank" title="Twitter Link">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="" target="_blank" title="Instagram Link">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
-														<div class="item">
-								<div class="features-item">
-									<div class="icon">
-										<span class="fas fa-cloud-upload-alt"></span>
-									</div>
-									<div class="body">
-										<h6>强大的群管理</h6>
-										<p>
-											群主可禁止群成员互加好友，禁止修改昵称，群禁言，单独禁言，远程定时销毁群消息等										</p>
-									</div>
-								</div>
-							</div>
-														<div class="item">
-								<div class="features-item">
-									<div class="icon">
-										<span class="fas fa-fill"></span>
-									</div>
-									<div class="body">
-										<h6>对话高保护</h6>
-										<p>
-											双向删除对话，阅后即焚、定期销毁、绝密会话、私密会话等功能										</p>
-									</div>
-								</div>
-							</div>
-													</div>
-					</div>
-				</section>
-				<!--// Features Section End //-->
-
-				<!--// About Section Start //-->
-				<section class="section bg-light-grey" id="about">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-6">
-								<div class="about-inner">
-																		<h6>关于应用Private Talk</h6>
-									<h2>应用支持集群部署，高负载无压力，百万人同时在线，大群支撑万人群组，弱网的消息效率极佳！</h2>
-									<p>
-										Private Talk支持对接各大安卓厂商的离线推送，消息一触即发，音视频通话支持选择第三方节点介入，通话更高效顺畅！									</p>
-																		<div class="about-box-wrap">
-										<div class="row">
-																						<div class="col-md-6 col-sm-6">
-												<div class="about-box">
-													<h6>好评用户</h6>
-													<h5 class="counter">1080</h5>
-												</div>
-											</div>
-																						<div class="col-md-6 col-sm-6">
-												<div class="about-box">
-													<h6>下载应用程序</h6>
-													<h5 class="counter">16800</h5>
-												</div>
-											</div>
-																					</div>
-									</div>
-									<a href="#new-features" title="Read More" class="primary-btn">阅读更多</a>
-								</div>
-							</div>
-							<div class="col-lg-6 about-img">
-								<img src="images/912d4704ddb2fbdab8f64a22ff12fbb4.png" alt="About image" title="About image" class="img-fluid">							</div>
-						</div>
-					</div>
-				</section>
-				<!--// About Section End //-->
-
-				<!--// New Features Section Start //-->
-				<section id="new-features">
-					<div class="new-features-img">
-						<img src="images/84009a4c847dc325fe7e4592771c2614.png" alt="Private Talk新的功能" title="Private Talk新的功能">					</div>
-					<div class="container">
-						<div class="row justify-content-end">
-							<div class="col-lg-6">
-								<div class="new-features-inner">
-									<div class="inner-text">
-																				<h6>Private Talk新的功能</h6>
-										<h2>持续迭代更新产品应用，优化产品体验，加固通讯底层并发！</h2>
-										<p>
-											持续迭代更新产品应用，优化产品体验，加固通讯底层并发！										</p>
-																			</div>
-									<ul class="new-features-list">
-																				<li>
-											<h5>01</h5>
-											<div class="text">
-												<h6>朋友生活圈瞬间</h6>
-												<p>
-													除了拥有私密安全的通讯功能外还拥有朋友圈，生活圈，分享精彩的生活瞬间！												</p>
-											</div>
-										</li>
-																				<li>
-											<h5>02</h5>
-											<div class="text">
-												<h6>激活码注册</h6>
-												<p>
-													为了更好的筛选用户，提高用户质量，Private Talk打造出完美的激活码注册模式！												</p>
-											</div>
-										</li>
-																			</ul>
-									<a href="#screenshots" title="Read More" class="primary-btn">阅读更多</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--// New Features Section End //-->
-
-				<!--// Screenshots Section Start //-->
-				<section class="section" id="screenshots">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>应用 <span>截图</span></h2>
-									<h4>
-										Private Talk界面展示									</h4>
-																	</div>
-							</div>
-						</div>
-						<div class="screenshots-carousel owl-carousel owl-theme">
-														<div class="item">
-								<img src="images/2e1d3152a4638d5071ac23fc2d1e6dfb.png" alt="应用截图1"	class="img-fluid">
-							</div>
-														<div class="item">
-								<img src="images/ebee148347e8b302a2e6fddbfd3d5103.png" alt="应用截图1"	class="img-fluid">
-							</div>
-														<div class="item">
-								<img src="images/e28d3244fb2d5dda3fae68f1f4577858.png" alt="应用截图1"	class="img-fluid">
-							</div>
-														<div class="item">
-								<img src="images/f91c9adb366ecb03647f2b788ba1f7d7.png" alt="应用截图1"	class="img-fluid">
-							</div>
-														<div class="item">
-								<img src="images/ecfd661ba951e87c1d3c5da5997f305f.png" alt="应用截图1"	class="img-fluid">
-							</div>
-														<div class="item">
-								<img src="images/5fc248f031d7768c00cbc5b6b0239239.png" alt="应用截图1"	class="img-fluid">
-							</div>
-													</div>
-					</div>
-				</section>
-				<!--// Screenshots Section End //-->
-
-				<!--// Watch Video Section Start //-->
-				<div id="watch-video" data-bg-image-path="https://www.aatcw.com/static/index/img/bg/watch-video-bg.png">
-					<div class="container text-center">
-						<div class="watch-video-inner">
-							<a href="static/index/home.mp4" class="watch-video-btn"><i class="fa fa-play"></i></a>
 						</div>
 					</div>
 				</div>
-				<!--// Watch Video Section End //-->
+			</section>
+			<!--// Our Team Section End //-->
 
-				<!--// Testimonials Section Start //-->
-				<section class="section bg-light-grey" id="testimonials">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>我们的 <span>客户 </span> 怎么说</h2>
-									<h4>
-										一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力									</h4>
-																	</div>
+			<!--// FAQ Section Start //-->
+			<section class="section" id="faq-area">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>常见问题</h2>
+								<h4>
+									只有热爱自己的本职工作才能把工作做好，最重要的是保持一种积极的态度. </h4>
 							</div>
 						</div>
-						<div class="testimonials-carousel owl-carousel owl-theme">
-														<div class="item">
-								<div class="testimonial-item">
-									<div class="img">
-										<img src="images/0d0620dfc8f7dcbb907fce74d5be9933.png" alt="乔治·威廉" title="乔治·威廉">
-									</div>
-									<div class="body">
-										<h6>乔治·威廉</h6>
-										<span>香港客户</span>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<p>
-											im 大群客户，需要支持万人群，之前一直用别的三方，架构不稳定，经常tcp连接不上，后面找到我们目前系统用户超10w+，同时最高在线1w+，互动顺畅，使用的是4核32g的服务器x3台										</p>
-									</div>
-								</div>
-							</div>
-														<div class="item">
-								<div class="testimonial-item">
-									<div class="img">
-										<img src="images/2f76af7d5e29a345478168a18ecd786a.png" alt="理查德·阿尔维斯" title="理查德·阿尔维斯">
-									</div>
-									<div class="body">
-										<h6>理查德·阿尔维斯</h6>
-										<span>新加坡私有化海外客户</span>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<p>
-											之前用的是开源的三方即时通讯的软件，群管理功能不够用，自己去二开的话技术成本极高，而且需要测试，完全不能商用，最终选择了Private Talk私有化部署，3天就上线了，现在用户有5w，一切稳定！										</p>
-									</div>
-								</div>
-							</div>
-														<div class="item">
-								<div class="testimonial-item">
-									<div class="img">
-										<img src="images/35b951ef05d46a10bda910e1cb4651ca.png" alt="詹姆斯·凯里" title="詹姆斯·凯里">
-									</div>
-									<div class="body">
-										<h6>詹姆斯·凯里</h6>
-										<span>越南 客户</span>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<p>
-											当时在越南本地找的开发团队在开发，开发测试上线，由于越南技术团队不成熟，im经验不够，bug问题比较多，几百个用户就开始卡，直接没法使用，导致项目耽搁，最好找到mi团队定制私有化部署，快速上线，稳定运行中！										</p>
-									</div>
-								</div>
-							</div>
-														<div class="item">
-								<div class="testimonial-item">
-									<div class="img">
-										<img src="images/a1c3a4456cbc0753cbee743ffdfb6faa.png" alt="阿尔 · 维斯" title="阿尔 · 维斯">
-									</div>
-									<div class="body">
-										<h6>阿尔 · 维斯</h6>
-										<span>马来西亚客户</span>
-										<div class="rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<p>
-											当时在网上找的软件团队买了一个便宜有后门的通讯软件，用着用着非常多的问题，各种漏洞，导致项目损失惨重，后面经过朋友介绍找到Private Talk团队，现在聊天软件非常稳定，基本不存在售后，非常的省心！										</p>
-									</div>
-								</div>
-							</div>
-													</div>
 					</div>
-				</section>
-				<!--// Testimonials Section End //-->
-
-				<!--// Pricing Section Start //-->
-				<section class="section pb-minus-70" id="pricing">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>我们的 <span>定价 </span></h2>
-									<h4>企业级私有化部署，支持集群单机等部署方式，自定义logo，自定义app名字！</h4>
-																	</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne247">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne247" aria-expanded="false"
+										aria-controls="accordionItemOne247">
+										<i class="fas fa-question"></i>
+										<span>1. 为什么需要加密沟通？</span>
+									</a>
+								</div>
+								<div id="accordionItemOne247" class="collapse" aria-labelledby="accordionHeadingOne247">
+									<div class="accordion-body">
+										<p>
+											即时通讯平台高效便捷的交流方式真正拉近了人与人之间的空间距离，无论对于个人用户还是企业用户，
+											都成为一种不可或缺的交流工具。但近年来屡屡见诸媒体端的信息泄露事件也让部分人对通讯软件的安全性和用户隐私保障方面提出了越来越多的质疑。 </p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne248">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne248" aria-expanded="false"
+										aria-controls="accordionItemOne248">
+										<i class="fas fa-question"></i>
+										<span>2. 什么是端对端加密？</span>
+									</a>
+								</div>
+								<div id="accordionItemOne248" class="collapse" aria-labelledby="accordionHeadingOne248">
+									<div class="accordion-body">
+										<p>
+											最先进的端到端加密(由开源信号协议提供支持)可确保您的对话安全。我们无法阅读您的消息或听取您的来电，其他任何人也不能。隐私不是可选的模式-这只是Private Talk的工作方式。
+											加密密钥存在于用户设备上，而没有其他地方。因此，没有人-甚至Private Talk都无法阅读您的消息。 </p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne249">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne249" aria-expanded="false"
+										aria-controls="accordionItemOne249">
+										<i class="fas fa-question"></i>
+										<span>3：什么是阅后即焚？</span>
+									</a>
+								</div>
+								<div id="accordionItemOne249" class="collapse" aria-labelledby="accordionHeadingOne249">
+									<div class="accordion-body">
+										<p>
+											开始阅后即焚后，消息到时间后会从双方的设备上自动销毁；私聊计时方式：对方阅读后，双方开始同时计时销毁；群聊计时方式：发送/收到，消息开始独立计时销毁； </p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="row justify-content-center">
-														<div class="col-md-6 col-lg-4">
-								<div class="price-table">
-									<div class="icon">
-										<span class="fa fa-user-shield"></span>
+						<div class="col-lg-6 accordion-resp-mt">
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne250">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne250" aria-expanded="false"
+										aria-controls="accordionItemOne250">
+										<i class="fas fa-question"></i>
+										<span>4：如何获取邀请码？</span>
+									</a>
+								</div>
+								<div id="accordionItemOne250" class="collapse" aria-labelledby="accordionHeadingOne250">
+									<div class="accordion-body">
+										<p>
+											可以通过我们有资质的代理商购买激活码，同时可以向官方购买邀请码！ </p>
 									</div>
-									<div class="text">
-										<h2>￥30000.00</h2>
-										<h6>租用版本单节点</h6>
-										<span>租用</span>
-									</div>
-									<div class="list">
-										<p>&nbsp;每月租金：8000元/月<br/>&nbsp;服务器：自费（代买）<br/></p><p>&nbsp;单聊</p><p style="white-space: normal;">&nbsp;群聊</p><p style="white-space: normal;">&nbsp;节点支持数：单个节点<br/><span style="text-wrap: wrap;">&nbsp;音视频通话：否</span></p><p style="white-space: normal;">&nbsp;web多开：否<br/></p><p style="white-space: normal;">&nbsp;5/8h技术 支持</p><p style="white-space: normal;">&nbsp;免费更新</p><p style="white-space: normal;">&nbsp;大群支持1000人以内</p><p style="white-space: normal;">&nbsp;bug免费修复</p><p>&nbsp;客户端支持：安卓+ios+web</p>									</div>
-									<a href="#" title="Order Now" class="primary-btn">现在下单</a>
 								</div>
 							</div>
-														<div class="col-md-6 col-lg-4">
-								<div class="price-table">
-									<div class="icon">
-										<span class="fa fa-user-shield"></span>
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne251">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne251" aria-expanded="false"
+										aria-controls="accordionItemOne251">
+										<i class="fas fa-question"></i>
+										<span>5:什么是双向销毁聊天记录？</span>
+									</a>
+								</div>
+								<div id="accordionItemOne251" class="collapse" aria-labelledby="accordionHeadingOne251">
+									<div class="accordion-body">
+										<p>
+											使用双向销毁聊天记录后，会从您的主设备和副设备以及对方所有设备上同时销毁所有聊天记录。群聊：则销毁该群所有用户的所有设备上关于该群聊的所有聊天记录。 </p>
 									</div>
-									<div class="text">
-										<h2>￥59800</h2>
-										<h6>单节点版本</h6>
-										<span>永久</span>
-									</div>
-									<div class="list">
-										<p>&nbsp;单聊</p><p>&nbsp;群聊</p><p><span style="text-wrap: wrap;">&nbsp;音视频通话：否</span><br/>&nbsp;<span style="color: rgb(255, 0, 0);">web是否支持多开：否</span><br/></p><p>&nbsp;<span style="color: rgb(255, 0, 0);">节点支持数：单个节点</span></p><p><span style="color: rgb(255, 0, 0);">&nbsp;服务器：私有</span></p><p>&nbsp;6/10h技术 支持</p><p>&nbsp;免费更新</p><p>&nbsp;大群支持2000人以内</p><p>&nbsp; bug免费修复</p><p>&nbsp;多服务器分布部署</p><p>&nbsp;客户端：安卓+苹果+web<br/>&nbsp;运维私有化：支持<span style="text-wrap: wrap;">（会提供运维文档）</span></p>									</div>
-									<a href="#" title="Order Now" class="primary-btn">现在下单</a>
 								</div>
 							</div>
-														<div class="col-md-6 col-lg-4">
-								<div class="price-table">
-									<div class="icon">
-										<span class="fa fa-user-tie"></span>
-									</div>
-									<div class="text">
-										<h2>￥78000</h2>
-										<h6>多节点版本【推荐】</h6>
-										<span>永久</span>
-									</div>
-									<div class="list">
-										<p style="white-space: normal;"></p><p style="text-wrap: wrap;">&nbsp;单聊</p><p style="text-wrap: wrap;">&nbsp;群聊</p><p style="text-wrap: wrap;"><span style="color: rgb(255, 0, 0);">&nbsp;音视频通话：支持</span><br/>&nbsp;<span style="color: rgb(255, 0, 0);">web是否支持多开：否</span><br/></p><p style="text-wrap: wrap;">&nbsp;<span style="color: rgb(255, 0, 0);">节点支持数：单个节点</span></p><p style="text-wrap: wrap;"><span style="color: rgb(255, 0, 0);">&nbsp;服务器：私有<br/><span style="color: rgb(255, 0, 0); text-wrap: wrap;">&nbsp;群管理：支持定制化</span></span></p><p style="text-wrap: wrap;">&nbsp;7/12h技术 支持</p><p style="text-wrap: wrap;">&nbsp;免费更新</p><p style="text-wrap: wrap;">&nbsp;大群支持8000人以内</p><p style="text-wrap: wrap;">&nbsp; bug免费修复</p><p style="text-wrap: wrap;">&nbsp;多服务器弹性部署</p><p style="text-wrap: wrap;">&nbsp;客户端：安卓+苹果+web<br/>&nbsp;运维私有化：支持（会提供运维文档）</p><p style="white-space: normal;">&nbsp;</p>									</div>
-									<a href="#" title="Order Now" class="primary-btn">现在下单</a>
+							<div class="accordion-item">
+								<div class="accordion-item-header" id="accordionHeadingOne252">
+									<a href="#" data-toggle="collapse" data-target="#accordionItemOne252" aria-expanded="false"
+										aria-controls="accordionItemOne252">
+										<i class="fas fa-question"></i>
+										<span>6:如何安装这个程序？</span>
+									</a>
 								</div>
-							</div>
-														<div class="col-md-6 col-lg-4">
-								<div class="price-table">
-									<div class="icon">
-										<span class="fa fa-building"></span>
+								<div id="accordionItemOne252" class="collapse" aria-labelledby="accordionHeadingOne252">
+									<div class="accordion-body">
+										<p>
+											Private Talk在各大主流厂商均已经提交上架请求，如App Store，应用宝，Google，三星，华为，oppo，vivo，小米等市场！ </p>
 									</div>
-									<div class="text">
-										<h2>￥108000</h2>
-										<h6>旗舰型</h6>
-										<span>永久</span>
-									</div>
-									<div class="list">
-										<p style="white-space: normal;">&nbsp;单聊</p><p style="white-space: normal;">&nbsp;群聊</p><p style="white-space: normal;">&nbsp;音视频</p><p style="white-space: normal;">&nbsp;支持多节点（不限制数量）</p><p style="white-space: normal;">&nbsp;分布式架构（企业级微服务）</p><p style="white-space: normal;">&nbsp;7/24 支持</p><p style="white-space: normal;">&nbsp;免费更新</p><p style="white-space: normal;">&nbsp;大群支持不上限</p><p style="white-space: normal;">&nbsp;bug免费修复</p><p style="white-space: normal;">&nbsp;集群部署+分布式架构</p><p style="white-space: normal;">&nbsp;客户端（安卓+苹果+Windows+web）原生</p><p style="white-space: normal;">&nbsp;需要更多客户端请联系客服报价</p>									</div>
-									<a href="#" title="Order Now" class="primary-btn">现在下单</a>
-								</div>
-							</div>
-													</div>
-					</div>
-				</section>
-				<!--// Pricing Section End //-->
-
-				<!--// Download Section Start //-->
-				<section id="download-app" data-bg-image-path="https://www.aatcw.com/static/index/img/bg/download-app-bg.png">
-					<div class="container text-center">
-						<div class="row justify-content-center">
-							<div class="col-lg-12">
-								<div class="download-app-inner">
-									<div class="text">
-																				<h2>下载应用程序</h2>
-										<p>一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力</p>
-																			</div>
-									<div class="btn-group">
-																				<a href="#" title="安卓下载" class="outline-btn" target="_blank">安卓下载</a>
-																				<a href="#" title="平果下载" class="outline-btn" target="_blank">苹果下载</a>
-																				<a href="#" title="PC下载" class="outline-btn" target="_blank">PC下载</a>
-																				<a href="#" title="mac下载" class="outline-btn" target="_blank">mac下载</a>
-																				<a href="#" title="web版本" class="outline-btn" target="_blank">web版本</a>
-																			</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!--// Download Section End //-->
+				</div>
+			</section>
+			<!--// FAQ Section End //-->
 
-				<!--// Our Team Section Start //-->
-				<section class="section bg-light-grey" id="our-team">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>认识我们的 <span>团队 </span></h2>
-									<h4>
-										一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力									</h4>
-																	</div>
+
+
+			<!--// Contact Section Start //-->
+			<section class="section" id="contact">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="section-heading">
+								<h2>联系 <span>我们 </span></h2>
+								<h4>
+									一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力 </h4>
 							</div>
 						</div>
-						<div class="our-team-carousel owl-carousel owl-theme">
-														<div class="item">
-								<div class="team-item">
-									<div class="img">
-										<img src="images/85f4dc14177b4d78947113bbf66866a8.png" alt="/images/85f4dc14177b4d78947113bbf66866a8.png" title="迈克尔·威廉">
-									</div>
-									<div class="body">
-										<h6>
-											迈克尔·威廉										</h6>
-										<span>go lang 通讯层sever工程师</span>
-									</div>
-									<ul class="social">
-										<li>
-											<a href="#" target="_blank" title="Facebook Link">
-												<i class="fab fa-facebook-f"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Twitter Link">
-												<i class="fab fa-twitter"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Instagram Link">
-												<i class="fab fa-instagram"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-														<div class="item">
-								<div class="team-item">
-									<div class="img">
-										<img src="images/2abdfdf4fbb0af184e6b2d3c43186bde.png" alt="/images/2abdfdf4fbb0af184e6b2d3c43186bde.png" title="里克·罗德里格斯">
-									</div>
-									<div class="body">
-										<h6>
-											里克·罗德里格斯										</h6>
-										<span>java后端架构师</span>
-									</div>
-									<ul class="social">
-										<li>
-											<a href="#" target="_blank" title="Facebook Link">
-												<i class="fab fa-facebook-f"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Twitter Link">
-												<i class="fab fa-twitter"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Instagram Link">
-												<i class="fab fa-instagram"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-														<div class="item">
-								<div class="team-item">
-									<div class="img">
-										<img src="images/cc79578aebe4a677cf0d59ae8b0e0de5.png" alt="/images/cc79578aebe4a677cf0d59ae8b0e0de5.png" title="内森考利">
-									</div>
-									<div class="body">
-										<h6>
-											内森考利										</h6>
-										<span>ios客户端工程师</span>
-									</div>
-									<ul class="social">
-										<li>
-											<a href="#" target="_blank" title="Facebook Link">
-												<i class="fab fa-facebook-f"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Twitter Link">
-												<i class="fab fa-twitter"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank" title="Instagram Link">
-												<i class="fab fa-instagram"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-														<div class="item">
-								<div class="team-item">
-									<div class="img">
-										<img src="images/bbd23e4f76d9218b937f4fd7a9d583b2.png" alt="/images/bbd23e4f76d9218b937f4fd7a9d583b2.png" title="古斯塔沃·弗林">
-									</div>
-									<div class="body">
-										<h6>
-											古斯塔沃·弗林										</h6>
-										<span>Android客户端开发工程师</span>
-									</div>
-									<ul class="social">
-										<li>
-											<a href="" target="_blank" title="Facebook Link">
-												<i class="fab fa-facebook-f"></i>
-											</a>
-										</li>
-										<li>
-											<a href="" target="_blank" title="Twitter Link">
-												<i class="fab fa-twitter"></i>
-											</a>
-										</li>
-										<li>
-											<a href="" target="_blank" title="Instagram Link">
-												<i class="fab fa-instagram"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-													</div>
 					</div>
-				</section>
-				<!--// Our Team Section End //-->
-
-				<!--// FAQ Section Start //-->
-				<section class="section" id="faq-area">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-																		<h2>常见问题</h2>
-									<h4>
-										只有热爱自己的本职工作才能把工作做好，最重要的是保持一种积极的态度.									</h4>
-																	</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="google-map">
+								<img src="images/c8122db19dbd81990b2a97d441a3e67c.jpg" alt="">
 							</div>
 						</div>
+						<div class="col-lg-6">
+							<div class="contact-form">
+								<form action="https://t.hitosea.com/api/dialog/msg/sendtext" method="post" data-type="ajax" class="from">
+									<!-- <div class="contact-alerts">
+										<div class="empty-form" style="display: none;"><span>请填写必填字段</span></div>
+										<div class="security-alert" style="display: none;"><span>安全码不匹配 !</span>
+										</div>
+										<div class="email-invalid" style="display: none;">
+											<span>请输入一个有效的email.如(8888888@qq.com)</span>
+										</div>
+										<div class="phone-invalid" style="display: none;">
+											<span>请输入一个有效的电话号码.如(010-000-0000)</span>
+										</div>
+									</div> -->
+									<div class="row">
+										<div class="col-md-12">
+											<div class="custom-form-group">
+												<input type="text" class="custom-form-control" name="name" id="name" placeholder="请输入昵称">
+												<span class="fa fa-user"></span>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="custom-form-group">
+												<input type="text" class="custom-form-control" name="email" id="email" placeholder="请输入邮箱">
+												<span class="fa fa-envelope"></span>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="custom-form-group" id="desc_wrap">
+												<textarea class="custom-form-control text-area" id="content" name="content" cols="30" rows="9"
+													placeholder="选填" oninput="limitCharacters( 255)"></textarea>
+												<span class="fa fa-envelope-open"></span>
+												<p id="characterCount">0/255</p>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<button type="submit" class="primary-btn col-md-12"><img id="submitLoading" alt=""
+													src="images/loading.png" />提交</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Contact Section End //-->
+
+
+			<!--// Footer Start //-->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
 						<div class="row">
-							<div class="col-lg-6">
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne247">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne247"
-											aria-expanded="false" aria-controls="accordionItemOne247">
-											<i class="fas fa-question"></i>
-											<span>1. 为什么需要加密沟通？</span>
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget">
+									<h6 class="footer-title">关于我们</h6>
+									<p class="footer-desc">
+										Private Talk是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！ </p>
+									<div class="footer-social-links">
+										<a href="#">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-youtube"></i>
 										</a>
 									</div>
-									<div id="accordionItemOne247" class="collapse" aria-labelledby="accordionHeadingOne247">
-										<div class="accordion-body">
-											<p>
-												即时通讯平台高效便捷的交流方式真正拉近了人与人之间的空间距离，无论对于个人用户还是企业用户， 都成为一种不可或缺的交流工具。但近年来屡屡见诸媒体端的信息泄露事件也让部分人对通讯软件的安全性和用户隐私保障方面提出了越来越多的质疑。											</p>
-										</div>
-									</div>
-								</div>
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne248">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne248"
-											aria-expanded="false" aria-controls="accordionItemOne248">
-											<i class="fas fa-question"></i>
-											<span>2. 什么是端对端加密？</span>
-										</a>
-									</div>
-									<div id="accordionItemOne248" class="collapse" aria-labelledby="accordionHeadingOne248">
-										<div class="accordion-body">
-											<p>
-												最先进的端到端加密(由开源信号协议提供支持)可确保您的对话安全。我们无法阅读您的消息或听取您的来电，其他任何人也不能。隐私不是可选的模式-这只是Private Talk的工作方式。 加密密钥存在于用户设备上，而没有其他地方。因此，没有人-甚至Private Talk都无法阅读您的消息。											</p>
-										</div>
-									</div>
-								</div>
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne249">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne249"
-											aria-expanded="false" aria-controls="accordionItemOne249">
-											<i class="fas fa-question"></i>
-											<span>3：什么是阅后即焚？</span>
-										</a>
-									</div>
-									<div id="accordionItemOne249" class="collapse" aria-labelledby="accordionHeadingOne249">
-										<div class="accordion-body">
-											<p>
-												开始阅后即焚后，消息到时间后会从双方的设备上自动销毁；私聊计时方式：对方阅读后，双方开始同时计时销毁；群聊计时方式：发送/收到，消息开始独立计时销毁；											</p>
-										</div>
-									</div>
-								</div>
-															</div>
-							<div class="col-lg-6 accordion-resp-mt">
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne250">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne250"
-											aria-expanded="false" aria-controls="accordionItemOne250">
-											<i class="fas fa-question"></i>
-											<span>4：如何获取邀请码？</span>
-										</a>
-									</div>
-									<div id="accordionItemOne250" class="collapse" aria-labelledby="accordionHeadingOne250">
-										<div class="accordion-body">
-											<p>
-												可以通过我们有资质的代理商购买激活码，同时可以向官方购买邀请码！											</p>
-										</div>
-									</div>
-								</div>
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne251">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne251"
-											aria-expanded="false" aria-controls="accordionItemOne251">
-											<i class="fas fa-question"></i>
-											<span>5:什么是双向销毁聊天记录？</span>
-										</a>
-									</div>
-									<div id="accordionItemOne251" class="collapse" aria-labelledby="accordionHeadingOne251">
-										<div class="accordion-body">
-											<p>
-												使用双向销毁聊天记录后，会从您的主设备和副设备以及对方所有设备上同时销毁所有聊天记录。群聊：则销毁该群所有用户的所有设备上关于该群聊的所有聊天记录。											</p>
-										</div>
-									</div>
-								</div>
-																<div class="accordion-item">
-									<div class="accordion-item-header" id="accordionHeadingOne252">
-										<a href="#" data-toggle="collapse" data-target="#accordionItemOne252"
-											aria-expanded="false" aria-controls="accordionItemOne252">
-											<i class="fas fa-question"></i>
-											<span>6:如何安装这个程序？</span>
-										</a>
-									</div>
-									<div id="accordionItemOne252" class="collapse" aria-labelledby="accordionHeadingOne252">
-										<div class="accordion-body">
-											<p>
-												Private Talk在各大主流厂商均已经提交上架请求，如App Store，应用宝，Google，三星，华为，oppo，vivo，小米等市场！											</p>
-										</div>
-									</div>
-								</div>
-															</div>
-						</div>
-					</div>
-				</section>
-				<!--// FAQ Section End //-->
-
-
-
-				<!--// Contact Section Start //-->
-				<section class="section" id="contact">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="section-heading">
-									<h2>联系 <span>我们 </span></h2>
-									<h4>
-										一个早已确立的事实是，读者在查看页面布局时会被页面的可读内容分散注意力									</h4>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="google-map">
-									<img src="images/c8122db19dbd81990b2a97d441a3e67c.jpg" alt="">								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="contact-form">
-									<form action="" method="post" data-type="ajax">
-										<div class="contact-alerts">
-											<div class="empty-form" style="display: none;"><span>请填写必填字段</span></div>
-											<div class="security-alert" style="display: none;"><span>安全码不匹配 !</span>
-											</div>
-											<div class="email-invalid" style="display: none;">
-												<span>请输入一个有效的email.如(8888888@qq.com)</span></div>
-											<div class="phone-invalid" style="display: none;">
-												<span>请输入一个有效的电话号码.如(010-000-0000)</span></div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="custom-form-group">
-													<input type="text" class="custom-form-control" name="name" id="name"
-														placeholder="你的名字 *">
-													<span class="fa fa-user"></span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="custom-form-group">
-													<input type="text" class="custom-form-control" name="email" id="email"
-														placeholder="你的邮箱 *">
-													<span class="fa fa-envelope"></span>
-												</div>
-											</div>											
-											<div class="col-md-6">
-												<div class="custom-form-group">
-													<input type="text" class="custom-form-control" name="phone" id="phone"
-														placeholder="你的电话 *">													
-													<span class="fa fa-phone"></span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="custom-form-group">
-													<input type="text" class="custom-form-control" name="title" id="title" 
-													placeholder="您的需求 *">
-													<span class="fa fa-bookmark"></span>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="custom-form-group">
-													<input type="text" class="custom-form-control" name="address" id="address"
-														placeholder="您的地址">
-													<span class="fa fa-map-marker-alt"></span>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="custom-form-group">
-													<textarea class="custom-form-control text-area" id="content"
-														name="content" cols="30" rows="9"
-														placeholder="项目描述 *"></textarea>
-													<span class="fa fa-envelope-open"></span>
-												</div>
-											</div>
-											<div class="col-md-12">
-												<button type="submit" class="primary-btn">发送消息</button>
-											</div>
-										</div>
-									</form>
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget footer-widget-pl">
+									<h6 class="footer-title">导航链接</h6>
+									<ul class="footer-links">
+										<li>
+											<a href="#">首页</a>
+										</li>
+										<li>
+											<a href="#">功能</a>
+										</li>
+										<li>
+											<a href="#">客户</a>
+										</li>
+										<li>
+											<a href="#">价格</a>
+										</li>
+										<li>
+											<a href="#">联系</a>
+										</li>
+										<li>
+											<a href="#">下载</a>
+										</li>
+									</ul>
 								</div>
 							</div>
-						</div>
-					</div>
-				</section>
-				<!--// Contact Section End //-->
-
-
-				<!--// Footer Start //-->
-				<footer class="footer">
-					<div class="footer-top">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-6 col-lg-4 footer-widget-resp">
-									<div class="footer-widget">
-										<h6 class="footer-title">关于我们</h6>
-										<p class="footer-desc">
-											Private Talk是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！										</p>
-										<div class="footer-social-links">
-											<a href="#">
-												<i class="fab fa-facebook-f"></i>
-											</a>
-											<a href="#">
-												<i class="fab fa-twitter"></i>
-											</a>
-											<a href="#">
-												<i class="fab fa-instagram"></i>
-											</a>
-											<a href="#">
-												<i class="fab fa-youtube"></i>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 footer-widget-resp">
-									<div class="footer-widget footer-widget-pl">
-										<h6 class="footer-title">导航链接</h6>
-										<ul class="footer-links">
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget">
+									<h6 class="footer-title">联系方式</h6>
+									<div class="footer-contact-info-wrap">
+										<ul class="footer-contact-info-list">
 											<li>
-												<a href="#">首页</a>
+												<h6>地址:</h6>
+												<p>Hong Kong</p>
 											</li>
 											<li>
-												<a href="#">功能</a>
-											</li>
-											<li>
-												<a href="#">客户</a>
-											</li>
-											<li>
-												<a href="#">价格</a>
-											</li>
-											<li>
-												<a href="#">联系</a>
-											</li>
-											<li>
-												<a href="#">下载</a>
+												<h6>电子邮件和电话:</h6>
+												<div class="text">
+													<p><a href="#">shejiaoappkf@gmail.com</a></p>
+													<p><a href="#">853+63568066</a></p>
+												</div>
 											</li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-md-6 col-lg-4 footer-widget-resp">
-									<div class="footer-widget">
-										<h6 class="footer-title">联系方式</h6>
-										<div class="footer-contact-info-wrap">
-											<ul class="footer-contact-info-list">
-												<li>
-													<h6>地址:</h6>
-													<p>Hong Kong</p>
-												</li>
-												<li>
-													<h6>电子邮件和电话:</h6>
-													<div class="text">
-														<p><a href="#">shejiaoappkf@gmail.com</a></p>
-														<p><a href="#">853+63568066</a></p>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
 							</div>
-						</div>
-					</div>
-					<div class="copyright">
-						<div class="container">
-							<div class="copyright-text" style="display:flex; align-items: center;">© Copyright <script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#" target="_self">Private Talk</a></p></div>
-						</div>
-					</div>
-				</footer>
-				<!--// Footer End //-->
-
-			</main>
-			<!--// Main Area End //-->
-
-			<a href="#wrapper" class="scroll-top-btn">
-				<i class="fa fa-arrow-up"></i>
-			</a>
-			<!--// .scroll-top-btn // -->
-
-			<div id="preloader-wrap">
-				<div class="preloader-inner">
-					<div class="gooey">
-						<span class="dot"></span>
-						<div class="dots">
-							<span></span>
-							<span></span>
-							<span></span>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!--// Preloader // -->
-
-		</div>
-		<!--// Page Wrapper End //-->
-
-		<!-- Success Modal Start -->
-		<div class="modal fade custom-modal" id="contactFormSuccessModal" tabindex="-1" role="dialog"
-			aria-labelledby="contactFormSuccessModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header success">
-						<h5 class="modal-title" id="contactFormSuccessModalLabel">提示</h5>
-						<button type="button" class="close" data-dismiss="modal" id="closesuccess" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="form-popup-inner">
-							<div class="form-icon success">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-									<circle class="path circle" fill="none" stroke-width="6" stroke-miterlimit="10"
-										cx="65.1" cy="65.1" r="62.1" />
-									<polyline class="path check" fill="none" stroke-width="6" stroke-linecap="round"
-										stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
-								</svg>
-							</div>
-							<div class="form-body" id="success_message"></div>
+				<div class="copyright">
+					<div class="container">
+						<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
+							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#" target="_self">Private
+									Talk</a></p>
 						</div>
+					</div>
+				</div>
+			</footer>
+			<!--// Footer End //-->
+
+		</main>
+		<!--// Main Area End //-->
+
+		<a href="#wrapper" class="scroll-top-btn">
+			<i class="fa fa-arrow-up"></i>
+		</a>
+		<!--// .scroll-top-btn // -->
+
+		<div id="preloader-wrap">
+			<div class="preloader-inner">
+				<div class="gooey">
+					<span class="dot"></span>
+					<div class="dots">
+						<span></span>
+						<span></span>
+						<span></span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Success Modal End -->
+		<!--// Preloader // -->
 
-		<!-- Danger Modal Start -->
-		<div class="modal fade custom-modal" id="contactFormDangerModal" tabindex="-1" role="dialog"
-			aria-labelledby="contactFormDangerModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header danger">
-						<h5 class="modal-title" id="contactFormDangerModalLabel">提示</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+	</div>
+	<!--// Page Wrapper End //-->
+
+	<!-- Success Modal Start -->
+	<div class="modal fade custom-modal" id="contactFormSuccessModal" tabindex="-1" role="dialog"
+		aria-labelledby="contactFormSuccessModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header success">
+					<h5 class="modal-title" id="contactFormSuccessModalLabel">提示</h5>
+					<button type="button" class="close" data-dismiss="modal" id="closesuccess" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-popup-inner">
+						<div class="form-icon success">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+								<circle class="path circle" fill="none" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1"
+									r="62.1" />
+								<polyline class="path check" fill="none" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10"
+									points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+							</svg>
+						</div>
+						<div class="form-body" id="success_message"></div>
 					</div>
-					<div class="modal-body">
-						<div class="form-popup-inner">
-							<div class="form-icon danger">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-									<circle class="path circle" fill="none" stroke-width="6" stroke-miterlimit="10"
-										cx="65.1" cy="65.1" r="62.1" />
-									<line class="path line" fill="none" stroke-width="6" stroke-linecap="round"
-										stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
-									<line class="path line" fill="none" stroke-width="6" stroke-linecap="round"
-										stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
-								</svg>
-							</div>
-							<div class="form-body" id="error_message">
-							</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Success Modal End -->
+
+	<!-- Danger Modal Start -->
+	<div class="modal fade custom-modal" id="contactFormDangerModal" tabindex="-1" role="dialog"
+		aria-labelledby="contactFormDangerModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header danger">
+					<h5 class="modal-title" id="contactFormDangerModalLabel">提示</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-popup-inner">
+						<div class="form-icon danger">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+								<circle class="path circle" fill="none" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1"
+									r="62.1" />
+								<line class="path line" fill="none" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10"
+									x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+								<line class="path line" fill="none" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10"
+									x1="95.8" y1="38" x2="34.4" y2="92.2" />
+							</svg>
+						</div>
+						<div class="form-body" id="error_message">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Danger Modal End -->		
-		<!-- 咨询 -->
-        <div class="zhixun">
-          <ul>
-        		<li>
-        		  <div class="zxc"><a href="#" target="_blank"><em><img src="static/index/img/kf/telegram.png" alt="">Telegram</em></a></div>
-        		</li>
-        		<li>
-        		  <div class="zxc"><a href="#" target="_blank"><em><img src="static/index/img/kf/whatsapp.png" alt="">Whatsapp</em></a></div>
-        		</li>
-            <!--<li>-->
-            <!--  <div class="zxc ztel"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes" target="_blank"><em><img src="https://www.aatcw.com/static/index/img/kf/qq.png" alt="">QQ</em><span></span></a></div>-->
-            <!--</li>-->
-            <li>
-              <div class="zxc ztel"><a href="#" target="_blank"><em><img src="static/index/img/kf/tel.png" alt="">电话</em><span>853+63568066</span></a></div>
-            </li>
-            <!--<li>-->
-            <!--  <div class="zxc zwx"><a href="javascript:void(0);" target="_blank"><em><img src="https://www.aatcw.com/static/index/img/kf/ewm.png" alt="">微信</em><span><img src="/upload/20230312/3e979ff5fa5dfe20974496261d12a96d.png" alt=""></span></a></div>-->
-            <!--</li>-->
-            <li>
-              <div class="zxc ztp"><a href="javascript:void(0);" id="retop"><em><img src="static/index/img/kf/top.png" alt="">TOP</em></a></div>
-            </li>
-          </ul>
-        </div>
+	</div>
+	<!-- Danger Modal End -->
+	<!-- 咨询 -->
+	<div class="zhixun">
+		<ul>
+			<li>
+				<div class="zxc"><a href="#" target="_blank"><em><img src="static/index/img/kf/telegram.png"
+								alt="">Telegram</em></a></div>
+			</li>
+			<li>
+				<div class="zxc"><a href="#" target="_blank"><em><img src="static/index/img/kf/whatsapp.png"
+								alt="">Whatsapp</em></a></div>
+			</li>
+			<!--<li>-->
+			<!--  <div class="zxc ztel"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes" target="_blank"><em><img src="https://www.aatcw.com/static/index/img/kf/qq.png" alt="">QQ</em><span></span></a></div>-->
+			<!--</li>-->
+			<li>
+				<div class="zxc ztel"><a href="#" target="_blank"><em><img src="static/index/img/kf/tel.png"
+								alt="">电话</em><span>853+63568066</span></a></div>
+			</li>
+			<!--<li>-->
+			<!--  <div class="zxc zwx"><a href="javascript:void(0);" target="_blank"><em><img src="https://www.aatcw.com/static/index/img/kf/ewm.png" alt="">微信</em><span><img src="/upload/20230312/3e979ff5fa5dfe20974496261d12a96d.png" alt=""></span></a></div>-->
+			<!--</li>-->
+			<li>
+				<div class="zxc ztp"><a href="javascript:void(0);" id="retop"><em><img src="static/index/img/kf/top.png"
+								alt="">TOP</em></a></div>
+			</li>
+		</ul>
+	</div>
 
-		<!--// JQuery //-->
-		<script src="static/index/vendor/js/jquery.min.js"></script>
-		<!--// Images Loaded //-->
-		<script src="static/index/vendor/js/images.loaded.min.js"></script>
-		<!--// Magnific Popup //-->
-		<script src="static/index/vendor/js/magnific.popup.min.js"></script>
-		<!--// Popper Popup //-->
-		<script src="static/index/vendor/js/popper.min.js"></script>
-		<!--// Bootstrap //-->
-		<script src="static/index/vendor/js/bootstrap.min.js"></script>
-		<!--// Waypoint Js //-->
-		<script src="static/index/vendor/js/waypoint.min.js"></script>
-		<!--// Counter Up Js //-->
-		<script src="static/index/vendor/js/counter.up.min.js"></script>
-		<!--// JQuery Easing Functions //-->
-		<script src="static/index/vendor/js/jquery.easing.min.js"></script>
-		<!--// Owl Carousel //-->
-		<script src="static/index/vendor/js/owl.carousel.min.js"></script>
-		<!--// Form Validate //-->
-		<script src="static/index/vendor/js/validate.min.js"></script>
-		<!--// Main Js //-->
-		<script src="static/index/js/main.js"></script>
-		<!-- 简繁转换 -->
-		<script src="static/index/js/cn.js"></script>
-		
-				<script>
-        $(".nav-item a[href*='#']").on('click', function(event) {
-            if (this.hash !== "") {
-              event.preventDefault();
-              var hash = this.hash;
-              $('html, body').stop().animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-                window.location.hash = hash;
-              });
-            }
-        });
-		</script>
-				
-	</body>
+	<!--// JQuery //-->
+	<script src="static/index/vendor/js/jquery.min.js"></script>
+	<!--// Images Loaded //-->
+	<script src="static/index/vendor/js/images.loaded.min.js"></script>
+	<!--// Magnific Popup //-->
+	<script src="static/index/vendor/js/magnific.popup.min.js"></script>
+	<!--// Popper Popup //-->
+	<script src="static/index/vendor/js/popper.min.js"></script>
+	<!--// Bootstrap //-->
+	<script src="static/index/vendor/js/bootstrap.min.js"></script>
+	<!--// Waypoint Js //-->
+	<script src="static/index/vendor/js/waypoint.min.js"></script>
+	<!--// Counter Up Js //-->
+	<script src="static/index/vendor/js/counter.up.min.js"></script>
+	<!--// JQuery Easing Functions //-->
+	<script src="static/index/vendor/js/jquery.easing.min.js"></script>
+	<!--// Owl Carousel //-->
+	<script src="static/index/vendor/js/owl.carousel.min.js"></script>
+	<!--// Form Validate //-->
+	<script src="static/index/vendor/js/validate.min.js"></script>
+	<!--// Main Js //-->
+	<script src="static/index/js/main.js"></script>
+	<!-- 简繁转换 -->
+	<script src="static/index/js/cn.js"></script>
+	<script>
+		$(".nav-item a[href*='#']").on('click', function (event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').stop().animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+					window.location.hash = hash;
+				});
+			}
+		});
+		/* 限制表单textarea字符数 */
+		function limitCharacters(maxCharacters) {
+			const textarea = document.getElementById("content")
+			let text = textarea.value;
+			if (text.length > maxCharacters) {
+				textarea.value = text.slice(0, maxCharacters); // 截断文本
+				text = textarea.value;
+			}
+			document.getElementById('characterCount').textContent = `${text.length}/${maxCharacters}`;
+		}
+	</script>
+
+</body>
+
 </html>
-
-

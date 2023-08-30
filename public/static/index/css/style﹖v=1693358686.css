@@ -2379,7 +2379,7 @@ body[style], header[style] {
 }
 
 .google-map img {
-  min-height: 610px;
+  height: 520px;
   width: 100%;
 }
 

@@ -9,11 +9,15 @@
   color: #ccc;
 }
 #submitLoading{
-  position: absolute;
   display: none;
-  left: 42%;
   width: 18px;
   height: 18px;
   border-radius: 50%;
+  margin-right: 5px;
   animation: spin 3s infinite linear;
+}
+.contact-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1042,7 +1042,6 @@ body[style], header[style] {
 .header .nav-item .nav-link.active {
   opacity: 1;
 }
-
 .header .nav-item .nav-link:not(.active):after {
   left: 0;
   bottom: 0;

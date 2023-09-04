@@ -1282,6 +1282,7 @@ body[style], header[style] {
           animation: pulsePrimary 1s 1 ease-in-out forwards;
 }
 
+
 /* ---------------------------------------------------------------- */
 /* Responsive Media Query (992px)
 /* ---------------------------------------------------------------- */
@@ -1319,7 +1320,10 @@ body[style], header[style] {
   .header .main-menu .navbar-nav .nav-link:after {
     display: none;
   }
-  .header .main-menu .navbar-nav .nav-link.active {
+  .header .main-menu .navbar-nav .nav-item.my-active .news-active {
+    display: none;
+  }
+  .header .main-menu .navbar-nav .nav-item.my-active .nav-link {
     background: #5268F2;
     color: #fff !important;
     border-color: #5268F2;

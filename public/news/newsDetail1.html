@@ -24,6 +24,21 @@
 	<!--// Theme Main Css //-->
 	<link rel="stylesheet" href="../static/index/css/style%EF%B9%96v=1693360450.css">
 	<link rel="shortcut icon" href="../images/favicon.ico">
+	<style>
+		.header .nav-item{
+			position: relative;
+		}
+		.header .nav-item.my-active .news-active {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 7px;
+			z-index: 999;
+			content: '';
+			position: absolute;
+			background: #fff;
+		}
+	</style>
 
 </head>
 
@@ -64,8 +79,9 @@
 								<li class="nav-item">
 									<a class="nav-link menu-link" href="../index.html#pricing">价格</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link menu-link active" href="index.html">新闻</a>
+								<li class="nav-item my-active">
+									<a class="nav-link menu-link" href="index.html">新闻</a>
+									<div class="news-active"></div>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link menu-link" href="../index.html#contact">联系</a>
@@ -173,15 +189,15 @@
 									<ul class="footer-contact-info-list">
 										<li>
 											<h6>地址:</h6>
-											<p>Hong Kong</p>
+											<p>IT-ABLE INNOVATION CO.，LTD.
+												1550 Thanapoom Tower, 17 Floor Zone C,New Petchburi Road,Kwaeng Makkasan, Khet Rachtavee, Bangkok 10400</p>
 										</li>
-										<!-- <li>
-											<h6>电子邮件和电话:</h6>
+										<li>
+											<h6>企业邮箱:</h6>
 											<div class="text">
-												<p><a href="#">shejiaoappkf@gmail.com</a></p>
-												<p><a href="#">853+63568066</a></p>
+												<p><a href="#">sales@speedbox.ink</a></p>
 											</div>
-										</li> -->
+										</li>
 									</ul>
 								</div>
 							</div>

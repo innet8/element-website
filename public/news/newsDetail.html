@@ -24,7 +24,32 @@
 	<!--// Theme Main Css //-->
 	<link rel="stylesheet" href="../static/index/css/style%EF%B9%96v=1693360450.css">
 	<link rel="shortcut icon" href="../images/favicon.ico">
+	<style>
+		.newsWrap {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
 
+		.newsWrap .bggray {
+			flex-grow: 1;
+		}
+
+		.header .nav-item {
+			position: relative;
+		}
+
+		.header .nav-item.my-active .news-active {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 7px;
+			z-index: 999;
+			content: '';
+			position: absolute;
+			background: #fff;
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target="#fixedNavbar">
@@ -33,70 +58,72 @@
 	<div class="page-wrapper" id="wrapper">
 
 		<!--// Header Start //-->
-		<header class="header fixed-top" id="header">
-			<div id="nav-menu-wrap">
-				<div class="container">
-					<nav class="navbar navbar-expand-lg p-0">
-						<a class="navbar-brand" title="Home" href="../index.html">
-							<img src="../images/p_logo-white.svg" alt="Logo White" width="121" height="64"
-								class="img-fluid logo-transparent">
-							<img src="../images/p_logo.svg" alt="Logo White" width="121" height="64" class="img-fluid logo-normal">
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fixedNavbar"
-							aria-controls="fixedNavbar" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="togler-icon-inner">
-								<span class="line-1"></span>
-								<span class="line-2"></span>
-								<span class="line-3"></span>
-							</span>
-						</button>
-						<div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
-							<ul class="navbar-nav">
-								<li class="nav-item">
-									<a class="nav-link menu-link" href="../index.html">首页</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link menu-link" href="../index.html#features">功能</a>
-								</li>
+		<div class="newsWrap">
+			<header class="header fixed-top" id="header">
+				<div id="nav-menu-wrap">
+					<div class="container">
+						<nav class="navbar navbar-expand-lg p-0">
+							<a class="navbar-brand" title="Home" href="../index.html">
+								<img src="../images/p_logo-white.svg" alt="Logo White" width="121" height="64"
+									class="img-fluid logo-transparent">
+								<img src="../images/p_logo.svg" alt="Logo White" width="121" height="64" class="img-fluid logo-normal">
+							</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fixedNavbar"
+								aria-controls="fixedNavbar" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="togler-icon-inner">
+									<span class="line-1"></span>
+									<span class="line-2"></span>
+									<span class="line-3"></span>
+								</span>
+							</button>
+							<div class="collapse navbar-collapse main-menu justify-content-end" id="fixedNavbar">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link menu-link" href="../index.html">首页</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link menu-link" href="../index.html#features">功能</a>
+									</li>
 
-								<li class="nav-item">
-									<a class="nav-link menu-link" href="../index.html#testimonials">客户</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link menu-link" href="../index.html#pricing">价格</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link menu-link active" href="./index.html">新闻</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link menu-link" href="../index.html#contact">联系</a>
-								</li>
+									<li class="nav-item">
+										<a class="nav-link menu-link" href="../index.html#testimonials">客户</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link menu-link" href="../index.html#pricing">价格</a>
+									</li>
+									<li class="nav-item my-active">
+										<a class="nav-link menu-link active" href="./index.html">新闻</a>
+										<div class="news-active"></div>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link menu-link" href="../index.html#contact">联系</a>
+									</li>
 
-								<li class=" lang-nav d-flex align-items-center">
-									<a href="javascript:zh_tran('t');">繁</a>
-									<a href="javascript:zh_tran('s');">中</a>
-									<a href="../index/index/index.html">英</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<!--// Header End  //-->
-		<div class="topimg"></div>
-		<div class="bggray">
-			<div class="wrap">
-				<div class="location"><a href="../index.html">首页</a><i>/</i><a href="index.html">新闻列表</a><i>/</i>文章详情</div>
-				<div class="newbox">
-					<div class="newtit">
-						<h1>EimChat安全好用的端到端加密通讯工具上架成功</h1>
-						<p>发表时间：2023-03-25 23:04:59 &nbsp;&nbsp; 浏览次数：112</p>
+									<li class=" lang-nav d-flex align-items-center">
+										<a href="javascript:zh_tran('t');">繁</a>
+										<a href="javascript:zh_tran('s');">中</a>
+										<a href="../index/index/index.html">英</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
 					</div>
-					<div class="pdbox">
-						<p>EimChat安全好用的端到端加密通讯工具上架啦</p>
-						<p>EimChat是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！</p>
-						<!-- <p>全网最稳定的即时通讯软件搭建，亲测，稳定运行720天不掉线！</p>
+				</div>
+			</header>
+			<!--// Header End  //-->
+			<div class="topimg"></div>
+			<div class="bggray">
+				<div class="wrap">
+					<div class="location"><a href="../index.html">首页</a><i>/</i><a href="index.html">新闻列表</a><i>/</i>文章详情</div>
+					<div class="newbox">
+						<div class="newtit">
+							<h1>EimChat安全好用的端到端加密通讯工具上架成功</h1>
+							<p>发表时间：2023-03-25 23:04:59 &nbsp;&nbsp; 浏览次数：112</p>
+						</div>
+						<div class="pdbox">
+							<p>EimChat安全好用的端到端加密通讯工具上架啦</p>
+							<p>EimChat是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！</p>
+							<!-- <p>全网最稳定的即时通讯软件搭建，亲测，稳定运行720天不掉线！</p>
 						<p><br /></p>
 						<p>protobuf通讯协议，golang imsever通讯层，单机并发30万+tps（同时有消息互动）</p>
 						<p><br /></p>
@@ -106,103 +133,104 @@
 						<p><br /></p>
 						<p><br /></p>
 						<p><br /></p> -->
+						</div>
+					</div>
+					<div class="prevnext">
+						<p class="fl"><a href="#">上一篇：没有了</a></p>
+						<p class="fr"><a href="./newsDetail1.html">下一篇：EimChat专注企业私有化部署...</a></p>
 					</div>
 				</div>
-				<div class="prevnext">
-					<p class="fl"><a href="#">上一篇：没有了</a></p>
-					<p class="fr"><a href="./newsDetail1.html">下一篇：EimChat专注企业私有化部署...</a></p>
-				</div>
 			</div>
-		</div>
 
-		<!--// Footer Start //-->
-		<footer class="footer">
-			<div class="footer-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-4 footer-widget-resp">
-							<div class="footer-widget">
-								<h6 class="footer-title">关于我们</h6>
-								<p class="footer-desc">
-									EimChat是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！ </p>
-								<div class="footer-social-links">
-									<a href="#">
-										<i class="fab fa-facebook-f"></i>
-									</a>
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-									<a href="#">
-										<i class="fab fa-instagram"></i>
-									</a>
-									<a href="#">
-										<i class="fab fa-youtube"></i>
-									</a>
+			<!--// Footer Start //-->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget">
+									<h6 class="footer-title">关于我们</h6>
+									<p class="footer-desc">
+										EimChat是自研通讯层，protobuf通讯协议，弱网更快，全球互通，消息类型众多，阅后即焚，定期销毁等功能，拥有强大的群管理功能，禁言，禁止查看群成员，禁止私聊等功能！ </p>
+									<div class="footer-social-links">
+										<a href="#">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-instagram"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-youtube"></i>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 footer-widget-resp">
-							<div class="footer-widget footer-widget-pl">
-								<h6 class="footer-title">导航链接</h6>
-								<ul class="footer-links">
-									<li>
-										<a href="../index.html#home">首页</a>
-									</li>
-									<li>
-										<a href="../index.html#features">功能</a>
-									</li>
-									<li>
-										<a href="../index.html#testimonials">客户</a>
-									</li>
-									<li>
-										<a href="../index.html#pricing">价格</a>
-									</li>
-									<li>
-										<a href="./index.html">新闻</a>
-									</li>
-									<li>
-										<a href="../index.html#contact">联系</a>
-									</li>
-									<li>
-										<a href="../index.html#">下载</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-4 footer-widget-resp">
-							<div class="footer-widget">
-								<h6 class="footer-title">联系方式</h6>
-								<div class="footer-contact-info-wrap">
-									<ul class="footer-contact-info-list">
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget footer-widget-pl">
+									<h6 class="footer-title">导航链接</h6>
+									<ul class="footer-links">
 										<li>
-											<h6>地址:</h6>
-											<p>Hong Kong</p>
+											<a href="../index.html#home">首页</a>
 										</li>
-										<!-- <li>
-											<h6>电子邮件和电话:</h6>
-											<div class="text">
-												<p><a href="#">shejiaoappkf@gmail.com</a></p>
-												<p><a href="#">853+63568066</a></p>
-											</div>
-										</li> -->
+										<li>
+											<a href="../index.html#features">功能</a>
+										</li>
+										<li>
+											<a href="../index.html#testimonials">客户</a>
+										</li>
+										<li>
+											<a href="../index.html#pricing">价格</a>
+										</li>
+										<li>
+											<a href="./index.html">新闻</a>
+										</li>
+										<li>
+											<a href="../index.html#contact">联系</a>
+										</li>
+										<li>
+											<a href="../index.html#">下载</a>
+										</li>
 									</ul>
 								</div>
 							</div>
+							<div class="col-md-6 col-lg-4 footer-widget-resp">
+								<div class="footer-widget">
+									<h6 class="footer-title">联系方式</h6>
+									<div class="footer-contact-info-wrap">
+										<ul class="footer-contact-info-list">
+											<li>
+												<h6>地址:</h6>
+												<p>IT-ABLE INNOVATION CO.，LTD.
+													1550 Thanapoom Tower, 17 Floor Zone C,New Petchburi Road,Kwaeng Makkasan, Khet Rachtavee,
+													Bangkok 10400</p>
+											</li>
+											<li>
+												<h6>企业邮箱:</h6>
+												<div class="text">
+													<p><a href="#">sales@speedbox.ink</a></p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="copyright">
-				<div class="container">
-					<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
-						<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#" target="_self">EimChat</a></p>
+				<div class="copyright">
+					<div class="container">
+						<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
+							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#"
+									target="_self">EimChat</a></p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
 		<!--// Footer End //-->
-
-		</main>
 		<!--// Main Area End //-->
 
 		<a href="#wrapper" class="scroll-top-btn">
@@ -309,8 +337,8 @@
 			<!--  <div class="zxc zwx"><a href="javascript:void(0);" target="_blank"><em><img src="https://www.aatcw.com/static/index/img/kf/ewm.png" alt="">微信</em><span><img src="/upload/20230312/3e979ff5fa5dfe20974496261d12a96d.png" alt=""></span></a></div>-->
 			<!--</li>-->
 			<li>
-				<div class="zxc ztp"><a href="#" id="retop"><em><img src="../static/index/img/kf/top.png"
-								alt="">TOP</em></a></div>
+				<div class="zxc ztp"><a href="#" id="retop"><em><img src="../static/index/img/kf/top.png" alt="">TOP</em></a>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -339,6 +367,15 @@
 	<script src="../static/index/js/main.js"></script>
 	<!-- 简繁转换 -->
 	<script src="../static/index/js/cn.js"></script>
+	<script>
+		const isMoblie = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(navigator.userAgent)
+		if(isMoblie){
+			let element = document.querySelector('.newsWrap');
+			if(element){
+				element.style.height="inherit";
+			}
+		}
+	</script>
 
 
 </body>

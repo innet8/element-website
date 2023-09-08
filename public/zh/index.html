@@ -113,7 +113,7 @@
 						</div>
 						<div class="col-lg-5 col-xl-6 col-md-12 hero-img-resp">
 							<div class="hero-img">
-								<img src="../images/zh-heroImg.png" alt="EimChat" class="img-fluid">
+								<img src="../images/en-heroImg.png" alt="EimChat" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -216,8 +216,7 @@
 							</div>
 						</div>
 						<div class="col-lg-6 about-img">
-							<img src="../images/zh-about-img.png" alt="About image" title="About image"
-								class="img-fluid">
+							<img src="../images/en-about-img.png" alt="About image" title="About image" class="img-fluid">
 						</div>
 					</div>
 				</div>
@@ -402,7 +401,8 @@
 										<i class="fa fa-star"></i>
 									</div>
 									<p>
-										当时在网上找的软件团队买了一个便宜有后门的通讯软件，用着用着非常多的问题，各种漏洞，导致项目损失惨重，后面经过朋友介绍找到EimChat团队，现在聊天软件非常稳定，基本不存在售后，非常的省心！ </p>
+										当时在网上找的软件团队买了一个便宜有后门的通讯软件，用着用着非常多的问题，各种漏洞，导致项目损失惨重，后面经过朋友介绍找到EimChat团队，现在聊天软件非常稳定，基本不存在售后，非常的省心！
+									</p>
 								</div>
 							</div>
 						</div>
@@ -836,7 +836,8 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-form">
-								<form action="https://t.hitosea.com/api/dialog/msg/sendtext" method="post" data-type="ajax" class="from">
+								<form action="https://t.hitosea.com/api/dialog/msg/sendtext" method="post" data-type="ajax"
+									class="from">
 									<!-- <div class="contact-alerts">
 										<div class="empty-form" style="display: none;"><span>请填写必填字段</span></div>
 										<div class="security-alert" style="display: none;"><span>安全码不匹配 !</span>
@@ -931,7 +932,8 @@
 											<li>
 												<h6>地址:</h6>
 												<p>IT-ABLE INNOVATION CO.，LTD.
-													1550 Thanapoom Tower, 17 Floor Zone C,New Petchburi Road,Kwaeng Makkasan, Khet Rachtavee, Bangkok 10400</p>
+													1550 Thanapoom Tower, 17 Floor Zone C,New Petchburi Road,Kwaeng Makkasan, Khet Rachtavee,
+													Bangkok 10400</p>
 											</li>
 											<li>
 												<h6>企业邮箱:</h6>
@@ -949,7 +951,8 @@
 				<div class="copyright">
 					<div class="container">
 						<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
-							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#" target="_self">EimChat</a></p>
+							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a id="policy" href="./privacy.html"
+									target="_blank">Privacy Policy</a></p>
 						</div>
 					</div>
 				</div>
@@ -1094,6 +1097,18 @@
 	<!-- 简繁转换 -->
 	<script src="../static/index/js/cn.js"></script>
 	<script>
+		const policyDom = document.getElementById("policy")
+		policyDom.addEventListener("click", function (event) {
+			// 阻止默认的页面跳转行为
+			event.preventDefault();
+			if(zh_choose==='t'){
+				console.log("aaa")
+				window.open("./privacy.html#traditional", "_blank");
+			}else{
+				console.log("bbb")
+				window.open("./privacy.html", "_blank");
+			}
+		});
 		$(".nav-item a[href*='#']").on('click', function (event) {
 			if (this.hash !== "") {
 				event.preventDefault();

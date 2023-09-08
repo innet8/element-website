@@ -203,8 +203,8 @@
 				<div class="copyright">
 					<div class="container">
 						<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
-							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#"
-									target="_self">EimChat</a></p>
+							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a id="policy" href="../zh/privacy.html"
+									target="_blank">Privacy Policy</a></p>
 						</div>
 					</div>
 				</div>
@@ -355,6 +355,16 @@
 				element.style.height="inherit";
 			}
 		}
+		const policyDom = document.getElementById("policy")
+		policyDom.addEventListener("click", function (event) {
+			// 阻止默认的页面跳转行为
+			event.preventDefault();
+			if(zh_choose==='t'){
+				window.open("../zh/privacy.html#traditional", "_blank");
+			}else{
+				window.open("../zh/privacy.html", "_blank");
+			}
+		});
 	</script>
 </body>
 

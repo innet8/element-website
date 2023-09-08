@@ -1382,7 +1382,16 @@ body[style], header[style] {
     background: #5268F2;
   }
   .header-shrink .togler-icon-inner span {
-    background-color: #000;
+    background-color: #5268F2 !important;
+  }
+  .header{
+    padding: 0 !important;
+  }
+  .header .navbar{
+    height: 52.19px !important;
+  }
+  .price-table .primary-btn{
+    width: 100%;
   }
 }
 
@@ -1552,6 +1561,9 @@ body[style], header[style] {
     margin-right: 0;
     margin-bottom: 15px;
   }
+  .primary-btn{
+    width: 100%;
+  }
 }
 
 /* ---------------------------------------------------------------- */
@@ -1668,7 +1680,7 @@ body[style], header[style] {
 @media only screen and (max-width: 991.98px) {
   .about-img {
     margin-top: 30px;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -1757,10 +1769,12 @@ body[style], header[style] {
   .new-features-inner .new-features-list li h5 {
     margin-right: 0;
     margin-bottom: 20px;
+    text-align: center;
   }
   .new-features-inner .new-features-list li .text h6 {
     font-size: 20px;
     margin-bottom: 15px;
+    text-align: center;
   }
 }
 
@@ -2035,17 +2049,22 @@ body[style], header[style] {
 /* Responsive Media Query (450px)
 /* ---------------------------------------------------------------- */
 @media only screen and (max-width: 450px) {
-  .download-app-inner .btn-group {
+  .download-app-inner .btn-group,.hero-inner .btn-group {
     display: block;
     text-align: center;
   }
-  .download-app-inner .btn-group a {
+
+  .download-app-inner .btn-group a,.hero-inner .btn-group a {
     display: inline-block;
     min-width: 170px;
   }
-  .download-app-inner .btn-group .outline-btn {
+
+  .download-app-inner .btn-group .outline-btn,.hero-inner .btn-group .outline-btn{
     margin-right: 0;
     margin-bottom: 15px;
+  }
+  .hero-banner .hero-inner .btn-group .outline-btn {
+    margin-right: 0 !important;
   }
 }
 
@@ -2389,6 +2408,13 @@ body[style], header[style] {
 @media only screen and (max-width: 991.98px) {
   .google-map {
     margin-bottom: 30px;
+  }
+  .google-map img {
+    height: inherit;
+    width: 100%;
+  }
+  .copyright-text{
+    justify-content: center;
   }
 }
 

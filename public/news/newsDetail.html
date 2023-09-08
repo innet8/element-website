@@ -63,7 +63,7 @@
 				<div id="nav-menu-wrap">
 					<div class="container">
 						<nav class="navbar navbar-expand-lg p-0">
-							<a class="navbar-brand" title="Home" href="../index.html">
+							<a class="navbar-brand" title="Home" href="../zh/index.html">
 								<img src="../images/p_logo-white.svg" alt="Logo White" width="121" height="64"
 									class="img-fluid logo-transparent">
 								<img src="../images/p_logo.svg" alt="Logo White" width="121" height="64" class="img-fluid logo-normal">
@@ -209,8 +209,8 @@
 				<div class="copyright">
 					<div class="container">
 						<div class="copyright-text" style="display:flex; align-items: center;">© Copyright
-							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a href="#"
-									target="_self">EimChat</a></p>
+							<script>document.write((new Date()).getFullYear())</script> &nbsp;<p><a id="policy" href="../zh/privacy.html"
+									target="_blank">Privacy Policy</a></p>
 						</div>
 					</div>
 				</div>
@@ -361,6 +361,16 @@
 				element.style.height="inherit";
 			}
 		}
+		const policyDom = document.getElementById("policy")
+		policyDom.addEventListener("click", function (event) {
+			// 阻止默认的页面跳转行为
+			event.preventDefault();
+			if(zh_choose==='t'){
+				window.open("../zh/privacy.html#traditional", "_blank");
+			}else{
+				window.open("../zh/privacy.html", "_blank");
+			}
+		});
 	</script>
 
 

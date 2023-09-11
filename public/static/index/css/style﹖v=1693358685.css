@@ -93,6 +93,12 @@ p {
   h4, .h4 {
     font-size: 1.8rem;
   }
+  .footer-top{
+    display: none;
+  }
+  .zhixun ul li .zxc{
+    display: none;
+  }
 }
 
 /* ---------------------------------------------------------------- */

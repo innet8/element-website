@@ -355,7 +355,7 @@ p {
 .scroll-top-btn.active {
   opacity: 1;
   bottom: 10px;
-  visibility: visible;
+  visibility: none;
 }
 
 /* ---------------------------------------------------------------- */
@@ -894,6 +894,9 @@ body[style], header[style] {
   }
   .comments-wrap .comments-item-wrap .comments-item.sub-comment {
     padding-left: 100px;
+  }
+  .scroll-top-btn.active{
+    visibility: visible;
   }
 }
 
@@ -1985,6 +1988,12 @@ body[style], header[style] {
   font-size: 50px;
   margin-bottom: 10px;
 }
+
+.price-table .text .cheap {
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: line-through;
+  }
 
 .price-table .text h6 {
   margin-bottom: 5px;

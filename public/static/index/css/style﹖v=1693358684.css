@@ -395,7 +395,7 @@ p {
 .scroll-top-btn.active {
   opacity: 1;
   bottom: 10px;
-  visibility: visible;
+  visibility: noen;
 }
 
 /* ---------------------------------------------------------------- */
@@ -702,7 +702,7 @@ p {
 
 #contactFormSuccessModal .modal-header.success,
 #contactFormDangerModal .modal-header.success {
-  background: #4caf50;
+  background: #5268F2;
   color: #fff;
 }
 
@@ -976,6 +976,9 @@ header[style] {
 
   .comments-wrap .comments-item-wrap .comments-item.sub-comment {
     padding-left: 100px;
+  }
+  .scroll-top-btn.active {
+    visibility: visible;
   }
 }
 
@@ -2062,6 +2065,7 @@ header[style] {
 /* 16.Pricing                          
 /* ---------------------------------------------------------------- */
 .price-table {
+    position: relative;
   padding: 40px 30px;
   text-align: center;
   margin-bottom: 30px;
@@ -2118,6 +2122,20 @@ header[style] {
   margin-bottom: 10px;
 }
 
+.price-table .text .cheap {
+    font-size: 30px;
+    color: #ededed;
+    text-decoration: line-through;
+  }
+  .price-table .price-table-save{ 
+    color: #fff;
+    font-size: 18px;
+    background: #5268F2;
+    position: absolute;
+    padding: 5px 10px;
+    right: 0;
+    top: 20px;
+}
 .price-table .text h6 {
   margin-bottom: 5px;
   font-size: 18px;

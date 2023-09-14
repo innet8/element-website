@@ -525,6 +525,9 @@ $(document).on('submit','form[data-type=ajax]',function(){
 			$("#contactFormSuccessModal #success_message").html(tips.tips);	
             setTimeout(()=>{
                 $("#contactFormSuccessModal").modal("hide");
+                $('#name').val('')
+                $('#email').val('')
+                $('#content').val('')
             },1500)
         },
         error: function (xhr, status, error) {

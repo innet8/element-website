@@ -2165,6 +2165,8 @@ header[style] {
   margin-right: 10px;
 }
 
+
+
 /* ---------------------------------------------------------------- */
 /* 17.Download App                    
 /* ---------------------------------------------------------------- */
@@ -3467,3 +3469,54 @@ header[style] {
   font-weight: bold;
   font-size: 18px;
 }
+
+#flow-chart {
+    z-index: 1;
+    padding: 100px 0;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background: #F9F9FB;
+  }
+  .flow-chart-box{
+    display: flex;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .flow-chart-box-s {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+  }
+  .flow-chart-box-s h3{
+    flex: 0 0 auto;
+    height: 56px;
+    width: 53px;
+    background: url(../../../images/trusicon.png) no-repeat;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  .flow-chart-box-s p{
+    text-align: left;
+    flex: 0 0 auto;
+  }
+  .flow-chart-box img {
+    width: 36px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    .flow-chart-box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flow-chart-box img{
+        transform: rotate(90deg);
+    }
+  }

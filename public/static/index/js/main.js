@@ -468,6 +468,10 @@ function HovyLeeContactForm(){
 function showtips(txt){
 	$("#contactFormDangerModal").modal("show");
 	$("#contactFormDangerModal #error_message").html(txt);
+    setTimeout(()=>{
+        $("#contactFormDangerModal").modal("hide");
+    },1500)
+    
 }
 $(document).on('submit','form[data-type=ajax]',function(){
 	var url = $(this).attr('action');
@@ -519,6 +523,9 @@ $(document).on('submit','form[data-type=ajax]',function(){
             document.getElementById("submitLoading").style.display = "none"
             $("#contactFormSuccessModal").modal("show");
 			$("#contactFormSuccessModal #success_message").html(tips.tips);	
+            setTimeout(()=>{
+                $("#contactFormSuccessModal").modal("hide");
+            },1500)
         },
         error: function (xhr, status, error) {
             // 请求失败处理逻辑

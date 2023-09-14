@@ -338,10 +338,8 @@ function HovyLeeBgImgPath(){
 ------------------------------------------------------------------- */
 function HovyLeeMGFPopup(){
     "use-scrict";
-
     // Variables
     let youtubePopup = $( '.watch-video-btn' );
-
     youtubePopup.magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -531,4 +529,8 @@ $(document).on('submit','form[data-type=ajax]',function(){
 	return false;
 });
 
-$("#closesuccess").click(function(){ window.location.reload() })
+$("#closesuccess").click(function(){ 
+    $('#name').val('')
+    $('#email').val('')
+    $('#content').val('')
+ })

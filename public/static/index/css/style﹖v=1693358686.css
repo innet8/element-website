@@ -395,7 +395,7 @@ p {
 .scroll-top-btn.active {
   opacity: 1;
   bottom: 10px;
-  visibility: visible;
+  visibility: none;
 }
 
 /* ---------------------------------------------------------------- */
@@ -976,6 +976,9 @@ header[style] {
 
   .comments-wrap .comments-item-wrap .comments-item.sub-comment {
     padding-left: 100px;
+  }
+  .scroll-top-btn.active{
+    visibility: visible;
   }
 }
 

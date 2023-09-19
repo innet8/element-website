@@ -544,3 +544,11 @@ $("#closesuccess").click(function(){
     $('#email').val('')
     $('#content').val('')
  })
+ 
+ $(".noDownload").click(function(){
+     alert('正在开发，敬请期待！')
+  })
+  
+  $(".noDownloaden").click(function(){
+      alert('Under development, stay tuned!')
+   })

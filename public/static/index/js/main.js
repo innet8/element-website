@@ -41,8 +41,8 @@ function HovyLeePreLoader(){
     let loaderInner = preloaderWrap.find( '.preloader-inner' );
  
     $( window ).ready(function(){
-        loaderInner.fadeOut(); 
-        preloaderWrap.delay(350).fadeOut( 'slow' );
+        loaderInner.fadeOut('fast'); 
+        preloaderWrap.delay(400).fadeOut( 'slow' );
     });   
 }
 

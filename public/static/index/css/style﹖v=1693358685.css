@@ -1932,9 +1932,16 @@ body[style], header[style] {
 /* ---------------------------------------------------------------- */
 /* 16.Pricing                          
 /* ---------------------------------------------------------------- */
+.justify-content-center-b .col-md-6 ,.justify-content-center-b .col-lg-4{
+    margin-bottom: 30px;
+}
 .price-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
   padding: 40px 30px;
+  height: 100%;
   text-align: center;
   margin-bottom: 30px;
   background: #fff;
@@ -2017,7 +2024,7 @@ body[style], header[style] {
   margin: 30px auto;
 }
 
-.price-table .list p{ margin-left:70px; background:url(../img/gou.png) no-repeat left center; text-align: left; padding-left:30px;}
+.price-table .list p{ background:url(../img/gou.png) no-repeat left center; text-align: left; padding-left:30px;}
 
 .price-table .list li {
   margin-bottom: 10px;
@@ -2027,7 +2034,9 @@ body[style], header[style] {
   color: #5268F2;
   margin-right: 10px;
 }
-
+.price-table .primary-btn {
+    margin-top: auto;
+  }
 /* ---------------------------------------------------------------- */
 /* 17.Download App                    
 /* ---------------------------------------------------------------- */
@@ -3099,6 +3108,7 @@ body[style], header[style] {
   }
   .flow-chart-box{
     display: flex;
+    justify-content: center;
     margin-top: 60px;
     flex-wrap: wrap;
     gap: 20px;
@@ -3137,5 +3147,22 @@ body[style], header[style] {
     }
     .flow-chart-box img{
         transform: rotate(90deg);
+    }
+  }
+
+
+  @media screen and (max-width: 1600px) {
+    .hero-img img{
+        height: 600px;
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    .hero-img img{
+        height: 560px;
+    }
+  }
+  @media screen and (max-width: 1025px) {
+    .hero-img img{
+        height: 450px;
     }
   }

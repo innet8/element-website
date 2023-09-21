@@ -1440,6 +1440,7 @@ body[style], header[style] {
 /* 10.Hero                                              
 /* ---------------------------------------------------------------- */
 .hero-banner {
+    padding:101px 0;
   position: relative;
   min-height: 100vh;
   display: -webkit-box;

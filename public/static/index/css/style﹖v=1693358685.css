@@ -1579,6 +1579,23 @@ body[style], header[style] {
 /* ---------------------------------------------------------------- */
 /* 11.Features                                            
 /* ---------------------------------------------------------------- */
+
+.item-replenish{
+  height: 550px;
+}
+
+.features-item-replenish {
+  height: 520px;
+}
+
+.item-client{
+  height: 860px;
+}
+
+.features-item-client {
+  height: 830px;
+}
+
 .features-item {
   padding: 40px 30px;
   text-align: center;
@@ -1592,6 +1609,8 @@ body[style], header[style] {
   -webkit-box-shadow: 0 5px 15px 0 rgba(194, 188, 210, 0.2);
           box-shadow: 0 5px 15px 0 rgba(194, 188, 210, 0.2);
 }
+
+
 
 .features-item .icon {
   display: inline-block;
@@ -3112,7 +3131,7 @@ body[style], header[style] {
     justify-content: center;
     margin-top: 60px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 14px;
   }
   .flow-chart-box-s {
     display: flex;

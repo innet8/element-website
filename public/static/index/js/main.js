@@ -189,6 +189,7 @@ function HovyLeeCarousel(){
         loop:true,
         margin:30,
         dots:true,
+        autoHeight:true,
         nav:false,
         autoplay:3500,
         responsive:{

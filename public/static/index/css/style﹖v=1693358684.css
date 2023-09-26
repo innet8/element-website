@@ -1707,6 +1707,20 @@ header[style] {
 /* ---------------------------------------------------------------- */
 /* 11.Features                                            
 /* ---------------------------------------------------------------- */
+
+
+.item-replenish{
+  height: 410px;
+}
+
+.item-client{
+  height: 660px;
+}
+
+.features-item-client {
+  height: 630px;
+}
+
 .features-item {
   padding: 40px 30px;
   text-align: center;
@@ -1719,6 +1733,10 @@ header[style] {
   transition: all 0.25s ease-in-out;
   -webkit-box-shadow: 0 5px 15px 0 rgba(194, 188, 210, 0.2);
   box-shadow: 0 5px 15px 0 rgba(194, 188, 210, 0.2);
+}
+
+.features-item-replenish {
+  height: 370px;
 }
 
 .features-item .icon {

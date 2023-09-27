@@ -547,9 +547,17 @@ $("#closesuccess").click(function(){
  })
  
  $(".noDownload").click(function(){
-     alert('正在开发，敬请期待！')
-  })
+    $("#Tips").modal("show");
+    $("#Tips #tips_message").html('正在开发，敬请期待！');
+    setTimeout(()=>{
+        $("#Tips").modal("hide");
+    },2000)
+})
   
   $(".noDownloaden").click(function(){
-      alert('Under development, stay tuned!')
-   })
+    $("#Tips").modal("show");
+    $("#Tips #tips_message").html('Under development, stay tuned!');
+    setTimeout(()=>{
+        $("#Tips").modal("hide");
+    },2000)
+})

@@ -548,7 +548,6 @@ $("#closesuccess").click(function(){
  
  $(".noDownload").click(function(){
     $("#Tips").modal("show");
-    $("#Tips #tips_message").html('正在开发，敬请期待！');
     setTimeout(()=>{
         $("#Tips").modal("hide");
     },2000)

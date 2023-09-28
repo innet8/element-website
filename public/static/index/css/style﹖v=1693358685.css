@@ -1717,8 +1717,9 @@ body[style], header[style] {
 /* 13.New Features                                     
 /* ---------------------------------------------------------------- */
 .new-features-inner {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 50px;
 }
 
 .new-features-inner .inner-text h6 {
@@ -1785,6 +1786,9 @@ body[style], header[style] {
 @media only screen and (max-width: 991.98px) {
   #new-features .new-features-img {
     display: none;
+  }
+  .new-features-inner {
+    padding-left: 10px;
   }
 }
 

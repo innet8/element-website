@@ -93,6 +93,15 @@ function zh_tranBody(obj) {
     }
 }
 function zh_tran(go) {
+    if (go == 't'){
+        document.getElementById("name").setAttribute("placeholder", "請輸入暱稱");
+        document.getElementById("email").setAttribute("placeholder", "請輸入郵​​箱");
+        document.getElementById("content").setAttribute("placeholder", "選填");
+    }else if (go == 's'){
+        document.getElementById("name").setAttribute("placeholder", "请输入昵称");
+        document.getElementById("email").setAttribute("placeholder", "请输入邮箱");
+        document.getElementById("content").setAttribute("placeholder", "选填");
+    }
     if (go) zh_choose = go;
     setCookie('zh_choose', zh_choose, zh_expires);
     if (go == 'n') {
